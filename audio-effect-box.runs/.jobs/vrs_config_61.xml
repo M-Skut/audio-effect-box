@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="audio_processing_xbar_0_synth_1" LaunchDir="/home/maniek/Vivado/audio-effect-box/audio-effect-box.runs/audio_processing_xbar_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="audio_processing_sample_to_leds_0_0_synth_1" LaunchDir="/home/maniek/Vivado/audio-effect-box/audio-effect-box.runs/audio_processing_sample_to_leds_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="audio_processing_axis_audio_delay_0_0_synth_1" LaunchDir="/home/maniek/Vivado/audio-effect-box/audio-effect-box.runs/audio_processing_axis_audio_delay_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="audio_processing_axi_gpio_0_0_synth_1" LaunchDir="/home/maniek/Vivado/audio-effect-box/audio-effect-box.runs/audio_processing_axi_gpio_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="synth_1" LaunchDir="/home/maniek/Vivado/audio-effect-box/audio-effect-box.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
+		<Parent Id="audio_processing_xbar_0_synth_1"/>
+		<Parent Id="audio_processing_sample_to_leds_0_0_synth_1"/>
+		<Parent Id="audio_processing_axis_audio_delay_0_0_synth_1"/>
+		<Parent Id="audio_processing_axi_gpio_0_0_synth_1"/>
+	</Run>
+	<Run Id="impl_1" LaunchDir="/home/maniek/Vivado/audio-effect-box/audio-effect-box.runs/impl_1" FlowId="Vivado_Implementation" FromStepId="init_design" ToStepId="write_bitstream">
+		<Parent Id="synth_1"/>
+		<Parent Id="audio_processing_xbar_0_synth_1"/>
+		<Parent Id="audio_processing_sample_to_leds_0_0_synth_1"/>
+		<Parent Id="audio_processing_axis_audio_delay_0_0_synth_1"/>
+		<Parent Id="audio_processing_axi_gpio_0_0_synth_1"/>
+	</Run>
+	<Parameters>
+		<Parameter Name="runs.monitorLSFJobs" Val="true" Type="bool"/>
+	</Parameters>
+</Runs>
+

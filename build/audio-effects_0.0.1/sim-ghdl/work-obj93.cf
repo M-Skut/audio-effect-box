@@ -1,0 +1,13 @@
+v 4
+file . "src/audio-effects_0.0.1/audio-effect-box.srcs/sim_blocks/new/sample_to_leds_tb.vhd" "7e818656d513cc2a6cb6c2ea261d83c63905c0bb" "20230605181308.902":
+  entity sample_to_leds_tb at 1( 0) + 0 on 4;
+  architecture simulation of sample_to_leds_tb at 8( 111) + 0 on 4;
+file . "src/audio-effects_0.0.1/audio-effect-box.srcs/sources_1/new/sample_to_leds.vhd" "d468525fc825177c59b5abacf993153cccc38eb9" "20230605181308.902":
+  entity sample_to_leds at 1( 0) + 0 on 4;
+  architecture behavioral of sample_to_leds at 15( 291) + 0 on 4;
+file . "src/audio-effects_0.0.1/audio-effect-box.srcs/sources_1/imports/rtl/stereo_to_mono.vhdl" "5bc000b48aabc54a029a277bd2576d3c9eaf9bab" "20230605181309.017":
+  entity stereo_to_mono at 1( 0) + 0 on 13;
+  architecture behavioral of stereo_to_mono at 25( 667) + 0 on 14;
+file . "src/audio-effects_0.0.1/audio-effect-box.srcs/sim_blocks/new/stereo_to_mono_tb.vhdl" "ebfdee277b7feb2fd3da693c1bc2a566d13ee7d0" "20230605181308.973":
+  entity stereo_to_mono_tb at 1( 0) + 0 on 11;
+  architecture test of stereo_to_mono_tb at 9( 116) + 0 on 12;

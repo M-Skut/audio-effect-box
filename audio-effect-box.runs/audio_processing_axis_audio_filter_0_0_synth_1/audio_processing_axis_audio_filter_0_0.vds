@@ -1,0 +1,700 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Tue Jun 20 19:01:42 2023
+# Process ID: 3125902
+# Current directory: /home/maniek/Vivado/audio-effect-box/audio-effect-box.runs/audio_processing_axis_audio_filter_0_0_synth_1
+# Command line: vivado -log audio_processing_axis_audio_filter_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source audio_processing_axis_audio_filter_0_0.tcl
+# Log file: /home/maniek/Vivado/audio-effect-box/audio-effect-box.runs/audio_processing_axis_audio_filter_0_0_synth_1/audio_processing_axis_audio_filter_0_0.vds
+# Journal file: /home/maniek/Vivado/audio-effect-box/audio-effect-box.runs/audio_processing_axis_audio_filter_0_0_synth_1/vivado.jou
+#-----------------------------------------------------------
+Sourcing tcl script '/home/maniek/.Xilinx/Vivado/Vivado_init.tcl'
+source audio_processing_axis_audio_filter_0_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/maniek/Vivado/ip_repo/spi_master_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/maniek/git/audio-processing/pl/ip_repo'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/maniek/Vivado/ip_repo/ssd1306_driver_1.0'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/mnt/HGST/Programy/Xilinx/Vivado/2018.3/data/ip'.
+Command: synth_design -top audio_processing_axis_audio_filter_0_0 -part xc7z020clg484-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 3126001 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 1825.215 ; gain = 92.867 ; free physical = 2582 ; free virtual = 19015
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'audio_processing_axis_audio_filter_0_0' [/home/maniek/Vivado/audio-effect-box/audio-effect-box.srcs/sources_1/bd/audio_processing/ip/audio_processing_axis_audio_filter_0_0/synth/audio_processing_axis_audio_filter_0_0.v:58]
+INFO: [Synth 8-638] synthesizing module 'axis_audio_filter' [/home/maniek/Vivado/audio-effect-box/audio-effect-box.srcs/sources_1/imports/rtl/filter.vhdl:25]
+INFO: [Synth 8-256] done synthesizing module 'axis_audio_filter' (1#1) [/home/maniek/Vivado/audio-effect-box/audio-effect-box.srcs/sources_1/imports/rtl/filter.vhdl:25]
+INFO: [Synth 8-6155] done synthesizing module 'audio_processing_axis_audio_filter_0_0' (2#1) [/home/maniek/Vivado/audio-effect-box/audio-effect-box.srcs/sources_1/bd/audio_processing/ip/audio_processing_axis_audio_filter_0_0/synth/audio_processing_axis_audio_filter_0_0.v:58]
+WARNING: [Synth 8-3331] design axis_audio_filter has unconnected port s_axis_tdata[7]
+WARNING: [Synth 8-3331] design axis_audio_filter has unconnected port s_axis_tdata[6]
+WARNING: [Synth 8-3331] design axis_audio_filter has unconnected port s_axis_tdata[5]
+WARNING: [Synth 8-3331] design axis_audio_filter has unconnected port s_axis_tdata[4]
+WARNING: [Synth 8-3331] design axis_audio_filter has unconnected port s_axis_tdata[3]
+WARNING: [Synth 8-3331] design axis_audio_filter has unconnected port s_axis_tdata[2]
+WARNING: [Synth 8-3331] design axis_audio_filter has unconnected port s_axis_tdata[1]
+WARNING: [Synth 8-3331] design axis_audio_filter has unconnected port s_axis_tdata[0]
+WARNING: [Synth 8-3331] design axis_audio_filter has unconnected port s_axis_tlast
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1869.965 ; gain = 137.617 ; free physical = 2576 ; free virtual = 19009
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1869.965 ; gain = 137.617 ; free physical = 2579 ; free virtual = 19012
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1869.965 ; gain = 137.617 ; free physical = 2579 ; free virtual = 19012
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2234.977 ; gain = 0.000 ; free physical = 2317 ; free virtual = 18746
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2234.977 ; gain = 0.000 ; free physical = 2317 ; free virtual = 18746
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.10 ; elapsed = 00:00:00.09 . Memory (MB): peak = 2237.977 ; gain = 3.000 ; free physical = 2314 ; free virtual = 18743
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 2237.977 ; gain = 505.629 ; free physical = 2423 ; free virtual = 18852
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 2237.977 ; gain = 505.629 ; free physical = 2423 ; free virtual = 18852
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 2237.977 ; gain = 505.629 ; free physical = 2423 ; free virtual = 18852
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4471] merging register 'input_buffer_reg[1][23:0]' into 'input_buffer_reg[0][23:0]' [/home/maniek/Vivado/audio-effect-box/audio-effect-box.srcs/sources_1/imports/rtl/filter.vhdl:103]
+INFO: [Synth 8-4471] merging register 'input_buffer_reg[2][23:0]' into 'input_buffer_reg[0][23:0]' [/home/maniek/Vivado/audio-effect-box/audio-effect-box.srcs/sources_1/imports/rtl/filter.vhdl:103]
+INFO: [Synth 8-4471] merging register 'input_buffer_reg[3][23:0]' into 'input_buffer_reg[0][23:0]' [/home/maniek/Vivado/audio-effect-box/audio-effect-box.srcs/sources_1/imports/rtl/filter.vhdl:103]
+INFO: [Synth 8-4471] merging register 'input_buffer_reg[4][23:0]' into 'input_buffer_reg[0][23:0]' [/home/maniek/Vivado/audio-effect-box/audio-effect-box.srcs/sources_1/imports/rtl/filter.vhdl:103]
+INFO: [Synth 8-4471] merging register 'input_buffer_reg[5][23:0]' into 'input_buffer_reg[0][23:0]' [/home/maniek/Vivado/audio-effect-box/audio-effect-box.srcs/sources_1/imports/rtl/filter.vhdl:103]
+INFO: [Synth 8-4471] merging register 'input_buffer_reg[6][23:0]' into 'input_buffer_reg[0][23:0]' [/home/maniek/Vivado/audio-effect-box/audio-effect-box.srcs/sources_1/imports/rtl/filter.vhdl:103]
+INFO: [Synth 8-4471] merging register 'input_buffer_reg[7][23:0]' into 'input_buffer_reg[0][23:0]' [/home/maniek/Vivado/audio-effect-box/audio-effect-box.srcs/sources_1/imports/rtl/filter.vhdl:103]
+INFO: [Synth 8-4471] merging register 'input_buffer_reg[8][23:0]' into 'input_buffer_reg[0][23:0]' [/home/maniek/Vivado/audio-effect-box/audio-effect-box.srcs/sources_1/imports/rtl/filter.vhdl:103]
+INFO: [Synth 8-4471] merging register 'input_buffer_reg[9][23:0]' into 'input_buffer_reg[0][23:0]' [/home/maniek/Vivado/audio-effect-box/audio-effect-box.srcs/sources_1/imports/rtl/filter.vhdl:103]
+INFO: [Synth 8-4471] merging register 'input_buffer_reg[10][23:0]' into 'input_buffer_reg[0][23:0]' [/home/maniek/Vivado/audio-effect-box/audio-effect-box.srcs/sources_1/imports/rtl/filter.vhdl:103]
+INFO: [Synth 8-4471] merging register 'input_buffer_reg[11][23:0]' into 'input_buffer_reg[0][23:0]' [/home/maniek/Vivado/audio-effect-box/audio-effect-box.srcs/sources_1/imports/rtl/filter.vhdl:103]
+INFO: [Synth 8-4471] merging register 'input_buffer_reg[12][23:0]' into 'input_buffer_reg[0][23:0]' [/home/maniek/Vivado/audio-effect-box/audio-effect-box.srcs/sources_1/imports/rtl/filter.vhdl:103]
+INFO: [Synth 8-4471] merging register 'input_buffer_reg[13][23:0]' into 'input_buffer_reg[0][23:0]' [/home/maniek/Vivado/audio-effect-box/audio-effect-box.srcs/sources_1/imports/rtl/filter.vhdl:103]
+INFO: [Synth 8-4471] merging register 'input_buffer_reg[14][23:0]' into 'input_buffer_reg[0][23:0]' [/home/maniek/Vivado/audio-effect-box/audio-effect-box.srcs/sources_1/imports/rtl/filter.vhdl:103]
+INFO: [Synth 8-4471] merging register 'input_buffer_reg[15][23:0]' into 'input_buffer_reg[0][23:0]' [/home/maniek/Vivado/audio-effect-box/audio-effect-box.srcs/sources_1/imports/rtl/filter.vhdl:103]
+INFO: [Synth 8-4471] merging register 'input_buffer_reg[16][23:0]' into 'input_buffer_reg[0][23:0]' [/home/maniek/Vivado/audio-effect-box/audio-effect-box.srcs/sources_1/imports/rtl/filter.vhdl:103]
+INFO: [Synth 8-4471] merging register 'input_buffer_reg[17][23:0]' into 'input_buffer_reg[0][23:0]' [/home/maniek/Vivado/audio-effect-box/audio-effect-box.srcs/sources_1/imports/rtl/filter.vhdl:103]
+INFO: [Synth 8-4471] merging register 'input_buffer_reg[18][23:0]' into 'input_buffer_reg[0][23:0]' [/home/maniek/Vivado/audio-effect-box/audio-effect-box.srcs/sources_1/imports/rtl/filter.vhdl:103]
+INFO: [Synth 8-4471] merging register 'input_buffer_reg[19][23:0]' into 'input_buffer_reg[0][23:0]' [/home/maniek/Vivado/audio-effect-box/audio-effect-box.srcs/sources_1/imports/rtl/filter.vhdl:103]
+INFO: [Synth 8-4471] merging register 'input_buffer_reg[20][23:0]' into 'input_buffer_reg[0][23:0]' [/home/maniek/Vivado/audio-effect-box/audio-effect-box.srcs/sources_1/imports/rtl/filter.vhdl:103]
+INFO: [Synth 8-4471] merging register 'input_buffer_reg[21][23:0]' into 'input_buffer_reg[0][23:0]' [/home/maniek/Vivado/audio-effect-box/audio-effect-box.srcs/sources_1/imports/rtl/filter.vhdl:103]
+INFO: [Synth 8-4471] merging register 'input_buffer_reg[22][23:0]' into 'input_buffer_reg[0][23:0]' [/home/maniek/Vivado/audio-effect-box/audio-effect-box.srcs/sources_1/imports/rtl/filter.vhdl:103]
+INFO: [Synth 8-4471] merging register 'input_buffer_reg[23][23:0]' into 'input_buffer_reg[0][23:0]' [/home/maniek/Vivado/audio-effect-box/audio-effect-box.srcs/sources_1/imports/rtl/filter.vhdl:103]
+INFO: [Synth 8-4471] merging register 'input_buffer_reg[24][23:0]' into 'input_buffer_reg[0][23:0]' [/home/maniek/Vivado/audio-effect-box/audio-effect-box.srcs/sources_1/imports/rtl/filter.vhdl:103]
+INFO: [Synth 8-4471] merging register 'input_buffer_reg[25][23:0]' into 'input_buffer_reg[0][23:0]' [/home/maniek/Vivado/audio-effect-box/audio-effect-box.srcs/sources_1/imports/rtl/filter.vhdl:103]
+INFO: [Synth 8-4471] merging register 'input_buffer_reg[26][23:0]' into 'input_buffer_reg[0][23:0]' [/home/maniek/Vivado/audio-effect-box/audio-effect-box.srcs/sources_1/imports/rtl/filter.vhdl:103]
+INFO: [Synth 8-4471] merging register 'input_buffer_reg[27][23:0]' into 'input_buffer_reg[0][23:0]' [/home/maniek/Vivado/audio-effect-box/audio-effect-box.srcs/sources_1/imports/rtl/filter.vhdl:103]
+INFO: [Synth 8-4471] merging register 'input_buffer_reg[28][23:0]' into 'input_buffer_reg[0][23:0]' [/home/maniek/Vivado/audio-effect-box/audio-effect-box.srcs/sources_1/imports/rtl/filter.vhdl:103]
+INFO: [Synth 8-4471] merging register 'input_buffer_reg[29][23:0]' into 'input_buffer_reg[0][23:0]' [/home/maniek/Vivado/audio-effect-box/audio-effect-box.srcs/sources_1/imports/rtl/filter.vhdl:103]
+INFO: [Synth 8-4471] merging register 'input_buffer_reg[30][23:0]' into 'input_buffer_reg[0][23:0]' [/home/maniek/Vivado/audio-effect-box/audio-effect-box.srcs/sources_1/imports/rtl/filter.vhdl:103]
+INFO: [Synth 8-4471] merging register 'input_buffer_reg[31][23:0]' into 'input_buffer_reg[0][23:0]' [/home/maniek/Vivado/audio-effect-box/audio-effect-box.srcs/sources_1/imports/rtl/filter.vhdl:103]
+INFO: [Synth 8-4471] merging register 'multuply_buffer_reg[1][39:0]' into 'multuply_buffer_reg[0][39:0]' [/home/maniek/Vivado/audio-effect-box/audio-effect-box.srcs/sources_1/imports/rtl/filter.vhdl:104]
+INFO: [Synth 8-4471] merging register 'multuply_buffer_reg[2][39:0]' into 'multuply_buffer_reg[0][39:0]' [/home/maniek/Vivado/audio-effect-box/audio-effect-box.srcs/sources_1/imports/rtl/filter.vhdl:104]
+INFO: [Synth 8-4471] merging register 'multuply_buffer_reg[3][39:0]' into 'multuply_buffer_reg[0][39:0]' [/home/maniek/Vivado/audio-effect-box/audio-effect-box.srcs/sources_1/imports/rtl/filter.vhdl:104]
+INFO: [Synth 8-4471] merging register 'multuply_buffer_reg[4][39:0]' into 'multuply_buffer_reg[0][39:0]' [/home/maniek/Vivado/audio-effect-box/audio-effect-box.srcs/sources_1/imports/rtl/filter.vhdl:104]
+INFO: [Synth 8-4471] merging register 'multuply_buffer_reg[5][39:0]' into 'multuply_buffer_reg[0][39:0]' [/home/maniek/Vivado/audio-effect-box/audio-effect-box.srcs/sources_1/imports/rtl/filter.vhdl:104]
+INFO: [Synth 8-4471] merging register 'multuply_buffer_reg[6][39:0]' into 'multuply_buffer_reg[0][39:0]' [/home/maniek/Vivado/audio-effect-box/audio-effect-box.srcs/sources_1/imports/rtl/filter.vhdl:104]
+INFO: [Synth 8-4471] merging register 'multuply_buffer_reg[7][39:0]' into 'multuply_buffer_reg[0][39:0]' [/home/maniek/Vivado/audio-effect-box/audio-effect-box.srcs/sources_1/imports/rtl/filter.vhdl:104]
+INFO: [Synth 8-4471] merging register 'multuply_buffer_reg[8][39:0]' into 'multuply_buffer_reg[0][39:0]' [/home/maniek/Vivado/audio-effect-box/audio-effect-box.srcs/sources_1/imports/rtl/filter.vhdl:104]
+INFO: [Synth 8-4471] merging register 'multuply_buffer_reg[9][39:0]' into 'multuply_buffer_reg[0][39:0]' [/home/maniek/Vivado/audio-effect-box/audio-effect-box.srcs/sources_1/imports/rtl/filter.vhdl:104]
+INFO: [Synth 8-4471] merging register 'multuply_buffer_reg[10][39:0]' into 'multuply_buffer_reg[0][39:0]' [/home/maniek/Vivado/audio-effect-box/audio-effect-box.srcs/sources_1/imports/rtl/filter.vhdl:104]
+INFO: [Synth 8-4471] merging register 'multuply_buffer_reg[11][39:0]' into 'multuply_buffer_reg[0][39:0]' [/home/maniek/Vivado/audio-effect-box/audio-effect-box.srcs/sources_1/imports/rtl/filter.vhdl:104]
+INFO: [Synth 8-4471] merging register 'multuply_buffer_reg[12][39:0]' into 'multuply_buffer_reg[0][39:0]' [/home/maniek/Vivado/audio-effect-box/audio-effect-box.srcs/sources_1/imports/rtl/filter.vhdl:104]
+INFO: [Synth 8-4471] merging register 'multuply_buffer_reg[13][39:0]' into 'multuply_buffer_reg[0][39:0]' [/home/maniek/Vivado/audio-effect-box/audio-effect-box.srcs/sources_1/imports/rtl/filter.vhdl:104]
+INFO: [Synth 8-4471] merging register 'multuply_buffer_reg[14][39:0]' into 'multuply_buffer_reg[0][39:0]' [/home/maniek/Vivado/audio-effect-box/audio-effect-box.srcs/sources_1/imports/rtl/filter.vhdl:104]
+INFO: [Synth 8-4471] merging register 'multuply_buffer_reg[15][39:0]' into 'multuply_buffer_reg[0][39:0]' [/home/maniek/Vivado/audio-effect-box/audio-effect-box.srcs/sources_1/imports/rtl/filter.vhdl:104]
+INFO: [Synth 8-4471] merging register 'multuply_buffer_reg[16][39:0]' into 'multuply_buffer_reg[0][39:0]' [/home/maniek/Vivado/audio-effect-box/audio-effect-box.srcs/sources_1/imports/rtl/filter.vhdl:104]
+INFO: [Synth 8-4471] merging register 'multuply_buffer_reg[17][39:0]' into 'multuply_buffer_reg[0][39:0]' [/home/maniek/Vivado/audio-effect-box/audio-effect-box.srcs/sources_1/imports/rtl/filter.vhdl:104]
+INFO: [Synth 8-4471] merging register 'multuply_buffer_reg[18][39:0]' into 'multuply_buffer_reg[0][39:0]' [/home/maniek/Vivado/audio-effect-box/audio-effect-box.srcs/sources_1/imports/rtl/filter.vhdl:104]
+INFO: [Synth 8-4471] merging register 'multuply_buffer_reg[19][39:0]' into 'multuply_buffer_reg[0][39:0]' [/home/maniek/Vivado/audio-effect-box/audio-effect-box.srcs/sources_1/imports/rtl/filter.vhdl:104]
+INFO: [Synth 8-4471] merging register 'multuply_buffer_reg[20][39:0]' into 'multuply_buffer_reg[0][39:0]' [/home/maniek/Vivado/audio-effect-box/audio-effect-box.srcs/sources_1/imports/rtl/filter.vhdl:104]
+INFO: [Synth 8-4471] merging register 'multuply_buffer_reg[21][39:0]' into 'multuply_buffer_reg[0][39:0]' [/home/maniek/Vivado/audio-effect-box/audio-effect-box.srcs/sources_1/imports/rtl/filter.vhdl:104]
+INFO: [Synth 8-4471] merging register 'multuply_buffer_reg[22][39:0]' into 'multuply_buffer_reg[0][39:0]' [/home/maniek/Vivado/audio-effect-box/audio-effect-box.srcs/sources_1/imports/rtl/filter.vhdl:104]
+INFO: [Synth 8-4471] merging register 'multuply_buffer_reg[23][39:0]' into 'multuply_buffer_reg[0][39:0]' [/home/maniek/Vivado/audio-effect-box/audio-effect-box.srcs/sources_1/imports/rtl/filter.vhdl:104]
+INFO: [Synth 8-4471] merging register 'multuply_buffer_reg[24][39:0]' into 'multuply_buffer_reg[0][39:0]' [/home/maniek/Vivado/audio-effect-box/audio-effect-box.srcs/sources_1/imports/rtl/filter.vhdl:104]
+INFO: [Synth 8-4471] merging register 'multuply_buffer_reg[25][39:0]' into 'multuply_buffer_reg[0][39:0]' [/home/maniek/Vivado/audio-effect-box/audio-effect-box.srcs/sources_1/imports/rtl/filter.vhdl:104]
+INFO: [Synth 8-4471] merging register 'multuply_buffer_reg[26][39:0]' into 'multuply_buffer_reg[0][39:0]' [/home/maniek/Vivado/audio-effect-box/audio-effect-box.srcs/sources_1/imports/rtl/filter.vhdl:104]
+INFO: [Synth 8-4471] merging register 'multuply_buffer_reg[27][39:0]' into 'multuply_buffer_reg[0][39:0]' [/home/maniek/Vivado/audio-effect-box/audio-effect-box.srcs/sources_1/imports/rtl/filter.vhdl:104]
+INFO: [Synth 8-4471] merging register 'multuply_buffer_reg[28][39:0]' into 'multuply_buffer_reg[0][39:0]' [/home/maniek/Vivado/audio-effect-box/audio-effect-box.srcs/sources_1/imports/rtl/filter.vhdl:104]
+INFO: [Synth 8-4471] merging register 'multuply_buffer_reg[29][39:0]' into 'multuply_buffer_reg[0][39:0]' [/home/maniek/Vivado/audio-effect-box/audio-effect-box.srcs/sources_1/imports/rtl/filter.vhdl:104]
+INFO: [Synth 8-4471] merging register 'multuply_buffer_reg[30][39:0]' into 'multuply_buffer_reg[0][39:0]' [/home/maniek/Vivado/audio-effect-box/audio-effect-box.srcs/sources_1/imports/rtl/filter.vhdl:104]
+INFO: [Synth 8-4471] merging register 'multuply_buffer_reg[31][39:0]' into 'multuply_buffer_reg[0][39:0]' [/home/maniek/Vivado/audio-effect-box/audio-effect-box.srcs/sources_1/imports/rtl/filter.vhdl:104]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2237.977 ; gain = 505.629 ; free physical = 2423 ; free virtual = 18853
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	               24 Bit    Registers := 34    
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module axis_audio_filter 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	               24 Bit    Registers := 34    
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-4471] merging register 'input_buffer_reg[0][23:0]' into 'input_buffer_reg[0][23:0]' [/home/maniek/Vivado/audio-effect-box/audio-effect-box.srcs/sources_1/imports/rtl/filter.vhdl:103]
+INFO: [Synth 8-4471] merging register 'input_buffer_reg[0][23:0]' into 'input_buffer_reg[0][23:0]' [/home/maniek/Vivado/audio-effect-box/audio-effect-box.srcs/sources_1/imports/rtl/filter.vhdl:103]
+INFO: [Synth 8-4471] merging register 'input_buffer_reg[0][23:0]' into 'input_buffer_reg[0][23:0]' [/home/maniek/Vivado/audio-effect-box/audio-effect-box.srcs/sources_1/imports/rtl/filter.vhdl:103]
+INFO: [Synth 8-4471] merging register 'input_buffer_reg[0][23:0]' into 'input_buffer_reg[0][23:0]' [/home/maniek/Vivado/audio-effect-box/audio-effect-box.srcs/sources_1/imports/rtl/filter.vhdl:103]
+INFO: [Synth 8-4471] merging register 'input_buffer_reg[0][23:0]' into 'input_buffer_reg[0][23:0]' [/home/maniek/Vivado/audio-effect-box/audio-effect-box.srcs/sources_1/imports/rtl/filter.vhdl:103]
+INFO: [Synth 8-4471] merging register 'input_buffer_reg[0][23:0]' into 'input_buffer_reg[0][23:0]' [/home/maniek/Vivado/audio-effect-box/audio-effect-box.srcs/sources_1/imports/rtl/filter.vhdl:103]
+INFO: [Synth 8-4471] merging register 'input_buffer_reg[0][23:0]' into 'input_buffer_reg[0][23:0]' [/home/maniek/Vivado/audio-effect-box/audio-effect-box.srcs/sources_1/imports/rtl/filter.vhdl:103]
+INFO: [Synth 8-4471] merging register 'input_buffer_reg[0][23:0]' into 'input_buffer_reg[0][23:0]' [/home/maniek/Vivado/audio-effect-box/audio-effect-box.srcs/sources_1/imports/rtl/filter.vhdl:103]
+INFO: [Synth 8-4471] merging register 'input_buffer_reg[0][23:0]' into 'input_buffer_reg[0][23:0]' [/home/maniek/Vivado/audio-effect-box/audio-effect-box.srcs/sources_1/imports/rtl/filter.vhdl:103]
+INFO: [Synth 8-4471] merging register 'input_buffer_reg[0][23:0]' into 'input_buffer_reg[0][23:0]' [/home/maniek/Vivado/audio-effect-box/audio-effect-box.srcs/sources_1/imports/rtl/filter.vhdl:103]
+INFO: [Synth 8-4471] merging register 'input_buffer_reg[0][23:0]' into 'input_buffer_reg[0][23:0]' [/home/maniek/Vivado/audio-effect-box/audio-effect-box.srcs/sources_1/imports/rtl/filter.vhdl:103]
+INFO: [Synth 8-4471] merging register 'input_buffer_reg[0][23:0]' into 'input_buffer_reg[0][23:0]' [/home/maniek/Vivado/audio-effect-box/audio-effect-box.srcs/sources_1/imports/rtl/filter.vhdl:103]
+INFO: [Synth 8-4471] merging register 'input_buffer_reg[0][23:0]' into 'input_buffer_reg[0][23:0]' [/home/maniek/Vivado/audio-effect-box/audio-effect-box.srcs/sources_1/imports/rtl/filter.vhdl:103]
+INFO: [Synth 8-4471] merging register 'input_buffer_reg[0][23:0]' into 'input_buffer_reg[0][23:0]' [/home/maniek/Vivado/audio-effect-box/audio-effect-box.srcs/sources_1/imports/rtl/filter.vhdl:103]
+INFO: [Synth 8-4471] merging register 'input_buffer_reg[0][23:0]' into 'input_buffer_reg[0][23:0]' [/home/maniek/Vivado/audio-effect-box/audio-effect-box.srcs/sources_1/imports/rtl/filter.vhdl:103]
+INFO: [Synth 8-4471] merging register 'input_buffer_reg[0][23:0]' into 'input_buffer_reg[0][23:0]' [/home/maniek/Vivado/audio-effect-box/audio-effect-box.srcs/sources_1/imports/rtl/filter.vhdl:103]
+INFO: [Synth 8-4471] merging register 'input_buffer_reg[0][23:0]' into 'input_buffer_reg[0][23:0]' [/home/maniek/Vivado/audio-effect-box/audio-effect-box.srcs/sources_1/imports/rtl/filter.vhdl:103]
+INFO: [Synth 8-4471] merging register 'input_buffer_reg[0][23:0]' into 'input_buffer_reg[0][23:0]' [/home/maniek/Vivado/audio-effect-box/audio-effect-box.srcs/sources_1/imports/rtl/filter.vhdl:103]
+INFO: [Synth 8-4471] merging register 'input_buffer_reg[0][23:0]' into 'input_buffer_reg[0][23:0]' [/home/maniek/Vivado/audio-effect-box/audio-effect-box.srcs/sources_1/imports/rtl/filter.vhdl:103]
+INFO: [Synth 8-4471] merging register 'input_buffer_reg[0][23:0]' into 'input_buffer_reg[0][23:0]' [/home/maniek/Vivado/audio-effect-box/audio-effect-box.srcs/sources_1/imports/rtl/filter.vhdl:103]
+INFO: [Synth 8-4471] merging register 'input_buffer_reg[0][23:0]' into 'input_buffer_reg[0][23:0]' [/home/maniek/Vivado/audio-effect-box/audio-effect-box.srcs/sources_1/imports/rtl/filter.vhdl:103]
+INFO: [Synth 8-4471] merging register 'input_buffer_reg[0][23:0]' into 'input_buffer_reg[0][23:0]' [/home/maniek/Vivado/audio-effect-box/audio-effect-box.srcs/sources_1/imports/rtl/filter.vhdl:103]
+INFO: [Synth 8-4471] merging register 'input_buffer_reg[0][23:0]' into 'input_buffer_reg[0][23:0]' [/home/maniek/Vivado/audio-effect-box/audio-effect-box.srcs/sources_1/imports/rtl/filter.vhdl:103]
+INFO: [Synth 8-4471] merging register 'input_buffer_reg[0][23:0]' into 'input_buffer_reg[0][23:0]' [/home/maniek/Vivado/audio-effect-box/audio-effect-box.srcs/sources_1/imports/rtl/filter.vhdl:103]
+INFO: [Synth 8-4471] merging register 'input_buffer_reg[0][23:0]' into 'input_buffer_reg[0][23:0]' [/home/maniek/Vivado/audio-effect-box/audio-effect-box.srcs/sources_1/imports/rtl/filter.vhdl:103]
+INFO: [Synth 8-4471] merging register 'input_buffer_reg[0][23:0]' into 'input_buffer_reg[0][23:0]' [/home/maniek/Vivado/audio-effect-box/audio-effect-box.srcs/sources_1/imports/rtl/filter.vhdl:103]
+INFO: [Synth 8-4471] merging register 'input_buffer_reg[0][23:0]' into 'input_buffer_reg[0][23:0]' [/home/maniek/Vivado/audio-effect-box/audio-effect-box.srcs/sources_1/imports/rtl/filter.vhdl:103]
+INFO: [Synth 8-4471] merging register 'input_buffer_reg[0][23:0]' into 'input_buffer_reg[0][23:0]' [/home/maniek/Vivado/audio-effect-box/audio-effect-box.srcs/sources_1/imports/rtl/filter.vhdl:103]
+INFO: [Synth 8-4471] merging register 'input_buffer_reg[0][23:0]' into 'input_buffer_reg[0][23:0]' [/home/maniek/Vivado/audio-effect-box/audio-effect-box.srcs/sources_1/imports/rtl/filter.vhdl:103]
+INFO: [Synth 8-4471] merging register 'input_buffer_reg[0][23:0]' into 'input_buffer_reg[0][23:0]' [/home/maniek/Vivado/audio-effect-box/audio-effect-box.srcs/sources_1/imports/rtl/filter.vhdl:103]
+INFO: [Synth 8-4471] merging register 'input_buffer_reg[0][23:0]' into 'input_buffer_reg[0][23:0]' [/home/maniek/Vivado/audio-effect-box/audio-effect-box.srcs/sources_1/imports/rtl/filter.vhdl:103]
+INFO: [Synth 8-4471] merging register 'multuply_buffer_reg[0][36:0]' into 'multuply_buffer_reg[0][36:0]' [/home/maniek/Vivado/audio-effect-box/audio-effect-box.srcs/sources_1/imports/rtl/filter.vhdl:104]
+INFO: [Synth 8-4471] merging register 'multuply_buffer_reg[0][36:0]' into 'multuply_buffer_reg[0][36:0]' [/home/maniek/Vivado/audio-effect-box/audio-effect-box.srcs/sources_1/imports/rtl/filter.vhdl:104]
+INFO: [Synth 8-4471] merging register 'multuply_buffer_reg[0][36:0]' into 'multuply_buffer_reg[0][36:0]' [/home/maniek/Vivado/audio-effect-box/audio-effect-box.srcs/sources_1/imports/rtl/filter.vhdl:104]
+INFO: [Synth 8-4471] merging register 'multuply_buffer_reg[0][36:0]' into 'multuply_buffer_reg[0][36:0]' [/home/maniek/Vivado/audio-effect-box/audio-effect-box.srcs/sources_1/imports/rtl/filter.vhdl:104]
+INFO: [Synth 8-4471] merging register 'multuply_buffer_reg[0][36:0]' into 'multuply_buffer_reg[0][36:0]' [/home/maniek/Vivado/audio-effect-box/audio-effect-box.srcs/sources_1/imports/rtl/filter.vhdl:104]
+INFO: [Synth 8-4471] merging register 'multuply_buffer_reg[0][36:0]' into 'multuply_buffer_reg[0][36:0]' [/home/maniek/Vivado/audio-effect-box/audio-effect-box.srcs/sources_1/imports/rtl/filter.vhdl:104]
+INFO: [Synth 8-4471] merging register 'multuply_buffer_reg[0][36:0]' into 'multuply_buffer_reg[0][36:0]' [/home/maniek/Vivado/audio-effect-box/audio-effect-box.srcs/sources_1/imports/rtl/filter.vhdl:104]
+INFO: [Common 17-14] Message 'Synth 8-4471' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+DSP Report: Generating DSP add_buffer_reg[30], operation Mode is: (C'+A'':B'')'.
+DSP Report: register B is absorbed into DSP add_buffer_reg[30].
+DSP Report: register multuply_buffer_reg[0] is absorbed into DSP add_buffer_reg[30].
+DSP Report: register A is absorbed into DSP add_buffer_reg[30].
+DSP Report: register A is absorbed into DSP add_buffer_reg[30].
+DSP Report: register add_buffer_reg[31] is absorbed into DSP add_buffer_reg[30].
+DSP Report: register add_buffer_reg[30] is absorbed into DSP add_buffer_reg[30].
+DSP Report: operator add_buffer_reg[30]0 is absorbed into DSP add_buffer_reg[30].
+DSP Report: Generating DSP add_buffer_reg[29], operation Mode is: (PCIN+A'':B'')'.
+DSP Report: register B is absorbed into DSP add_buffer_reg[29].
+DSP Report: register multuply_buffer_reg[0] is absorbed into DSP add_buffer_reg[29].
+DSP Report: register A is absorbed into DSP add_buffer_reg[29].
+DSP Report: register A is absorbed into DSP add_buffer_reg[29].
+DSP Report: register add_buffer_reg[29] is absorbed into DSP add_buffer_reg[29].
+DSP Report: operator add_buffer_reg[29]0 is absorbed into DSP add_buffer_reg[29].
+DSP Report: Generating DSP add_buffer_reg[28], operation Mode is: (PCIN+A'':B'')'.
+DSP Report: register B is absorbed into DSP add_buffer_reg[28].
+DSP Report: register multuply_buffer_reg[0] is absorbed into DSP add_buffer_reg[28].
+DSP Report: register A is absorbed into DSP add_buffer_reg[28].
+DSP Report: register A is absorbed into DSP add_buffer_reg[28].
+DSP Report: register add_buffer_reg[28] is absorbed into DSP add_buffer_reg[28].
+DSP Report: operator add_buffer_reg[28]0 is absorbed into DSP add_buffer_reg[28].
+DSP Report: Generating DSP add_buffer_reg[27], operation Mode is: (PCIN+A'':B'')'.
+DSP Report: register B is absorbed into DSP add_buffer_reg[27].
+DSP Report: register multuply_buffer_reg[0] is absorbed into DSP add_buffer_reg[27].
+DSP Report: register A is absorbed into DSP add_buffer_reg[27].
+DSP Report: register A is absorbed into DSP add_buffer_reg[27].
+DSP Report: register add_buffer_reg[27] is absorbed into DSP add_buffer_reg[27].
+DSP Report: operator add_buffer_reg[27]0 is absorbed into DSP add_buffer_reg[27].
+DSP Report: Generating DSP add_buffer_reg[26], operation Mode is: (PCIN+A'':B'')'.
+DSP Report: register B is absorbed into DSP add_buffer_reg[26].
+DSP Report: register multuply_buffer_reg[0] is absorbed into DSP add_buffer_reg[26].
+DSP Report: register A is absorbed into DSP add_buffer_reg[26].
+DSP Report: register A is absorbed into DSP add_buffer_reg[26].
+DSP Report: register add_buffer_reg[26] is absorbed into DSP add_buffer_reg[26].
+DSP Report: operator add_buffer_reg[26]0 is absorbed into DSP add_buffer_reg[26].
+DSP Report: Generating DSP add_buffer_reg[25], operation Mode is: (PCIN+A'':B'')'.
+DSP Report: register B is absorbed into DSP add_buffer_reg[25].
+DSP Report: register multuply_buffer_reg[0] is absorbed into DSP add_buffer_reg[25].
+DSP Report: register A is absorbed into DSP add_buffer_reg[25].
+DSP Report: register A is absorbed into DSP add_buffer_reg[25].
+DSP Report: register add_buffer_reg[25] is absorbed into DSP add_buffer_reg[25].
+DSP Report: operator add_buffer_reg[25]0 is absorbed into DSP add_buffer_reg[25].
+DSP Report: Generating DSP add_buffer_reg[24], operation Mode is: (PCIN+A'':B'')'.
+DSP Report: register B is absorbed into DSP add_buffer_reg[24].
+DSP Report: register multuply_buffer_reg[0] is absorbed into DSP add_buffer_reg[24].
+DSP Report: register A is absorbed into DSP add_buffer_reg[24].
+DSP Report: register A is absorbed into DSP add_buffer_reg[24].
+DSP Report: register add_buffer_reg[24] is absorbed into DSP add_buffer_reg[24].
+DSP Report: operator add_buffer_reg[24]0 is absorbed into DSP add_buffer_reg[24].
+DSP Report: Generating DSP add_buffer_reg[23], operation Mode is: (PCIN+A'':B'')'.
+DSP Report: register B is absorbed into DSP add_buffer_reg[23].
+DSP Report: register multuply_buffer_reg[0] is absorbed into DSP add_buffer_reg[23].
+DSP Report: register A is absorbed into DSP add_buffer_reg[23].
+DSP Report: register A is absorbed into DSP add_buffer_reg[23].
+DSP Report: register add_buffer_reg[23] is absorbed into DSP add_buffer_reg[23].
+DSP Report: operator add_buffer_reg[23]0 is absorbed into DSP add_buffer_reg[23].
+DSP Report: Generating DSP add_buffer_reg[22], operation Mode is: (PCIN+A'':B'')'.
+DSP Report: register B is absorbed into DSP add_buffer_reg[22].
+DSP Report: register multuply_buffer_reg[0] is absorbed into DSP add_buffer_reg[22].
+DSP Report: register A is absorbed into DSP add_buffer_reg[22].
+DSP Report: register A is absorbed into DSP add_buffer_reg[22].
+DSP Report: register add_buffer_reg[22] is absorbed into DSP add_buffer_reg[22].
+DSP Report: operator add_buffer_reg[22]0 is absorbed into DSP add_buffer_reg[22].
+DSP Report: Generating DSP add_buffer_reg[21], operation Mode is: (PCIN+A'':B'')'.
+DSP Report: register B is absorbed into DSP add_buffer_reg[21].
+DSP Report: register multuply_buffer_reg[0] is absorbed into DSP add_buffer_reg[21].
+DSP Report: register A is absorbed into DSP add_buffer_reg[21].
+DSP Report: register A is absorbed into DSP add_buffer_reg[21].
+DSP Report: register add_buffer_reg[21] is absorbed into DSP add_buffer_reg[21].
+DSP Report: operator add_buffer_reg[21]0 is absorbed into DSP add_buffer_reg[21].
+DSP Report: Generating DSP add_buffer_reg[20], operation Mode is: (PCIN+A'':B'')'.
+DSP Report: register B is absorbed into DSP add_buffer_reg[20].
+DSP Report: register multuply_buffer_reg[0] is absorbed into DSP add_buffer_reg[20].
+DSP Report: register A is absorbed into DSP add_buffer_reg[20].
+DSP Report: register A is absorbed into DSP add_buffer_reg[20].
+DSP Report: register add_buffer_reg[20] is absorbed into DSP add_buffer_reg[20].
+DSP Report: operator add_buffer_reg[20]0 is absorbed into DSP add_buffer_reg[20].
+DSP Report: Generating DSP add_buffer_reg[19], operation Mode is: (PCIN+A'':B'')'.
+DSP Report: register B is absorbed into DSP add_buffer_reg[19].
+DSP Report: register multuply_buffer_reg[0] is absorbed into DSP add_buffer_reg[19].
+DSP Report: register A is absorbed into DSP add_buffer_reg[19].
+DSP Report: register A is absorbed into DSP add_buffer_reg[19].
+DSP Report: register add_buffer_reg[19] is absorbed into DSP add_buffer_reg[19].
+DSP Report: operator add_buffer_reg[19]0 is absorbed into DSP add_buffer_reg[19].
+DSP Report: Generating DSP add_buffer_reg[18], operation Mode is: (PCIN+A'':B'')'.
+DSP Report: register B is absorbed into DSP add_buffer_reg[18].
+DSP Report: register multuply_buffer_reg[0] is absorbed into DSP add_buffer_reg[18].
+DSP Report: register A is absorbed into DSP add_buffer_reg[18].
+DSP Report: register A is absorbed into DSP add_buffer_reg[18].
+DSP Report: register add_buffer_reg[18] is absorbed into DSP add_buffer_reg[18].
+DSP Report: operator add_buffer_reg[18]0 is absorbed into DSP add_buffer_reg[18].
+DSP Report: Generating DSP add_buffer_reg[17], operation Mode is: (PCIN+A'':B'')'.
+DSP Report: register B is absorbed into DSP add_buffer_reg[17].
+DSP Report: register multuply_buffer_reg[0] is absorbed into DSP add_buffer_reg[17].
+DSP Report: register A is absorbed into DSP add_buffer_reg[17].
+DSP Report: register A is absorbed into DSP add_buffer_reg[17].
+DSP Report: register add_buffer_reg[17] is absorbed into DSP add_buffer_reg[17].
+DSP Report: operator add_buffer_reg[17]0 is absorbed into DSP add_buffer_reg[17].
+DSP Report: Generating DSP add_buffer_reg[16], operation Mode is: (PCIN+A'':B'')'.
+DSP Report: register B is absorbed into DSP add_buffer_reg[16].
+DSP Report: register multuply_buffer_reg[0] is absorbed into DSP add_buffer_reg[16].
+DSP Report: register A is absorbed into DSP add_buffer_reg[16].
+DSP Report: register A is absorbed into DSP add_buffer_reg[16].
+DSP Report: register add_buffer_reg[16] is absorbed into DSP add_buffer_reg[16].
+DSP Report: operator add_buffer_reg[16]0 is absorbed into DSP add_buffer_reg[16].
+DSP Report: Generating DSP add_buffer_reg[15], operation Mode is: (PCIN+A'':B'')'.
+DSP Report: register B is absorbed into DSP add_buffer_reg[15].
+DSP Report: register multuply_buffer_reg[0] is absorbed into DSP add_buffer_reg[15].
+DSP Report: register A is absorbed into DSP add_buffer_reg[15].
+DSP Report: register A is absorbed into DSP add_buffer_reg[15].
+DSP Report: register add_buffer_reg[15] is absorbed into DSP add_buffer_reg[15].
+DSP Report: operator add_buffer_reg[15]0 is absorbed into DSP add_buffer_reg[15].
+DSP Report: Generating DSP add_buffer_reg[14], operation Mode is: (PCIN+A'':B'')'.
+DSP Report: register B is absorbed into DSP add_buffer_reg[14].
+DSP Report: register multuply_buffer_reg[0] is absorbed into DSP add_buffer_reg[14].
+DSP Report: register A is absorbed into DSP add_buffer_reg[14].
+DSP Report: register A is absorbed into DSP add_buffer_reg[14].
+DSP Report: register add_buffer_reg[14] is absorbed into DSP add_buffer_reg[14].
+DSP Report: operator add_buffer_reg[14]0 is absorbed into DSP add_buffer_reg[14].
+DSP Report: Generating DSP add_buffer_reg[13], operation Mode is: (PCIN+A'':B'')'.
+DSP Report: register B is absorbed into DSP add_buffer_reg[13].
+DSP Report: register multuply_buffer_reg[0] is absorbed into DSP add_buffer_reg[13].
+DSP Report: register A is absorbed into DSP add_buffer_reg[13].
+DSP Report: register A is absorbed into DSP add_buffer_reg[13].
+DSP Report: register add_buffer_reg[13] is absorbed into DSP add_buffer_reg[13].
+DSP Report: operator add_buffer_reg[13]0 is absorbed into DSP add_buffer_reg[13].
+DSP Report: Generating DSP add_buffer_reg[12], operation Mode is: (PCIN+A'':B'')'.
+DSP Report: register B is absorbed into DSP add_buffer_reg[12].
+DSP Report: register multuply_buffer_reg[0] is absorbed into DSP add_buffer_reg[12].
+DSP Report: register A is absorbed into DSP add_buffer_reg[12].
+DSP Report: register A is absorbed into DSP add_buffer_reg[12].
+DSP Report: register add_buffer_reg[12] is absorbed into DSP add_buffer_reg[12].
+DSP Report: operator add_buffer_reg[12]0 is absorbed into DSP add_buffer_reg[12].
+DSP Report: Generating DSP add_buffer_reg[11], operation Mode is: (PCIN+A'':B'')'.
+DSP Report: register B is absorbed into DSP add_buffer_reg[11].
+DSP Report: register multuply_buffer_reg[0] is absorbed into DSP add_buffer_reg[11].
+DSP Report: register A is absorbed into DSP add_buffer_reg[11].
+DSP Report: register A is absorbed into DSP add_buffer_reg[11].
+DSP Report: register add_buffer_reg[11] is absorbed into DSP add_buffer_reg[11].
+DSP Report: operator add_buffer_reg[11]0 is absorbed into DSP add_buffer_reg[11].
+DSP Report: Generating DSP add_buffer_reg[10], operation Mode is: (PCIN+A'':B'')'.
+DSP Report: register B is absorbed into DSP add_buffer_reg[10].
+DSP Report: register multuply_buffer_reg[0] is absorbed into DSP add_buffer_reg[10].
+DSP Report: register A is absorbed into DSP add_buffer_reg[10].
+DSP Report: register A is absorbed into DSP add_buffer_reg[10].
+DSP Report: register add_buffer_reg[10] is absorbed into DSP add_buffer_reg[10].
+DSP Report: operator add_buffer_reg[10]0 is absorbed into DSP add_buffer_reg[10].
+DSP Report: Generating DSP add_buffer_reg[9], operation Mode is: (PCIN+A'':B'')'.
+DSP Report: register B is absorbed into DSP add_buffer_reg[9].
+DSP Report: register multuply_buffer_reg[0] is absorbed into DSP add_buffer_reg[9].
+DSP Report: register A is absorbed into DSP add_buffer_reg[9].
+DSP Report: register A is absorbed into DSP add_buffer_reg[9].
+DSP Report: register add_buffer_reg[9] is absorbed into DSP add_buffer_reg[9].
+DSP Report: operator add_buffer_reg[9]0 is absorbed into DSP add_buffer_reg[9].
+DSP Report: Generating DSP add_buffer_reg[8], operation Mode is: (PCIN+A'':B'')'.
+DSP Report: register B is absorbed into DSP add_buffer_reg[8].
+DSP Report: register multuply_buffer_reg[0] is absorbed into DSP add_buffer_reg[8].
+DSP Report: register A is absorbed into DSP add_buffer_reg[8].
+DSP Report: register A is absorbed into DSP add_buffer_reg[8].
+DSP Report: register add_buffer_reg[8] is absorbed into DSP add_buffer_reg[8].
+DSP Report: operator add_buffer_reg[8]0 is absorbed into DSP add_buffer_reg[8].
+DSP Report: Generating DSP add_buffer_reg[7], operation Mode is: (PCIN+A'':B'')'.
+DSP Report: register B is absorbed into DSP add_buffer_reg[7].
+DSP Report: register multuply_buffer_reg[0] is absorbed into DSP add_buffer_reg[7].
+DSP Report: register A is absorbed into DSP add_buffer_reg[7].
+DSP Report: register A is absorbed into DSP add_buffer_reg[7].
+DSP Report: register add_buffer_reg[7] is absorbed into DSP add_buffer_reg[7].
+DSP Report: operator add_buffer_reg[7]0 is absorbed into DSP add_buffer_reg[7].
+DSP Report: Generating DSP add_buffer_reg[6], operation Mode is: (PCIN+A'':B'')'.
+DSP Report: register B is absorbed into DSP add_buffer_reg[6].
+DSP Report: register multuply_buffer_reg[0] is absorbed into DSP add_buffer_reg[6].
+DSP Report: register A is absorbed into DSP add_buffer_reg[6].
+DSP Report: register A is absorbed into DSP add_buffer_reg[6].
+DSP Report: register add_buffer_reg[6] is absorbed into DSP add_buffer_reg[6].
+DSP Report: operator add_buffer_reg[6]0 is absorbed into DSP add_buffer_reg[6].
+DSP Report: Generating DSP add_buffer_reg[5], operation Mode is: (PCIN+A'':B'')'.
+DSP Report: register B is absorbed into DSP add_buffer_reg[5].
+DSP Report: register multuply_buffer_reg[0] is absorbed into DSP add_buffer_reg[5].
+DSP Report: register A is absorbed into DSP add_buffer_reg[5].
+DSP Report: register A is absorbed into DSP add_buffer_reg[5].
+DSP Report: register add_buffer_reg[5] is absorbed into DSP add_buffer_reg[5].
+DSP Report: operator add_buffer_reg[5]0 is absorbed into DSP add_buffer_reg[5].
+DSP Report: Generating DSP add_buffer_reg[4], operation Mode is: (PCIN+A'':B'')'.
+DSP Report: register B is absorbed into DSP add_buffer_reg[4].
+DSP Report: register multuply_buffer_reg[0] is absorbed into DSP add_buffer_reg[4].
+DSP Report: register A is absorbed into DSP add_buffer_reg[4].
+DSP Report: register A is absorbed into DSP add_buffer_reg[4].
+DSP Report: register add_buffer_reg[4] is absorbed into DSP add_buffer_reg[4].
+DSP Report: operator add_buffer_reg[4]0 is absorbed into DSP add_buffer_reg[4].
+DSP Report: Generating DSP add_buffer_reg[3], operation Mode is: (PCIN+A'':B'')'.
+DSP Report: register B is absorbed into DSP add_buffer_reg[3].
+DSP Report: register multuply_buffer_reg[0] is absorbed into DSP add_buffer_reg[3].
+DSP Report: register A is absorbed into DSP add_buffer_reg[3].
+DSP Report: register A is absorbed into DSP add_buffer_reg[3].
+DSP Report: register add_buffer_reg[3] is absorbed into DSP add_buffer_reg[3].
+DSP Report: operator add_buffer_reg[3]0 is absorbed into DSP add_buffer_reg[3].
+DSP Report: Generating DSP add_buffer_reg[2], operation Mode is: (PCIN+A'':B'')'.
+DSP Report: register B is absorbed into DSP add_buffer_reg[2].
+DSP Report: register multuply_buffer_reg[0] is absorbed into DSP add_buffer_reg[2].
+DSP Report: register A is absorbed into DSP add_buffer_reg[2].
+DSP Report: register A is absorbed into DSP add_buffer_reg[2].
+DSP Report: register add_buffer_reg[2] is absorbed into DSP add_buffer_reg[2].
+DSP Report: operator add_buffer_reg[2]0 is absorbed into DSP add_buffer_reg[2].
+DSP Report: Generating DSP add_buffer_reg[1], operation Mode is: (PCIN+A'':B'')'.
+DSP Report: register B is absorbed into DSP add_buffer_reg[1].
+DSP Report: register multuply_buffer_reg[0] is absorbed into DSP add_buffer_reg[1].
+DSP Report: register A is absorbed into DSP add_buffer_reg[1].
+DSP Report: register A is absorbed into DSP add_buffer_reg[1].
+DSP Report: register add_buffer_reg[1] is absorbed into DSP add_buffer_reg[1].
+DSP Report: operator add_buffer_reg[1]0 is absorbed into DSP add_buffer_reg[1].
+DSP Report: Generating DSP add_buffer_reg[0], operation Mode is: (PCIN+A'':B'')'.
+DSP Report: register B is absorbed into DSP add_buffer_reg[0].
+DSP Report: register multuply_buffer_reg[0] is absorbed into DSP add_buffer_reg[0].
+DSP Report: register A is absorbed into DSP add_buffer_reg[0].
+DSP Report: register A is absorbed into DSP add_buffer_reg[0].
+DSP Report: register add_buffer_reg[0] is absorbed into DSP add_buffer_reg[0].
+DSP Report: operator add_buffer_reg[0]0 is absorbed into DSP add_buffer_reg[0].
+WARNING: [Synth 8-3331] design axis_audio_filter has unconnected port s_axis_tdata[7]
+WARNING: [Synth 8-3331] design axis_audio_filter has unconnected port s_axis_tdata[6]
+WARNING: [Synth 8-3331] design axis_audio_filter has unconnected port s_axis_tdata[5]
+WARNING: [Synth 8-3331] design axis_audio_filter has unconnected port s_axis_tdata[4]
+WARNING: [Synth 8-3331] design axis_audio_filter has unconnected port s_axis_tdata[3]
+WARNING: [Synth 8-3331] design axis_audio_filter has unconnected port s_axis_tdata[2]
+WARNING: [Synth 8-3331] design axis_audio_filter has unconnected port s_axis_tdata[1]
+WARNING: [Synth 8-3331] design axis_audio_filter has unconnected port s_axis_tdata[0]
+WARNING: [Synth 8-3331] design axis_audio_filter has unconnected port s_axis_tlast
+INFO: [Synth 8-3886] merging instance 'inst/multuply_buffer_reg[0][0]' (FDRE) to 'inst/multuply_buffer_reg[0][10]'
+INFO: [Synth 8-3886] merging instance 'inst/multuply_buffer_reg[0][1]' (FDRE) to 'inst/multuply_buffer_reg[0][10]'
+INFO: [Synth 8-3886] merging instance 'inst/multuply_buffer_reg[0][2]' (FDRE) to 'inst/multuply_buffer_reg[0][10]'
+INFO: [Synth 8-3886] merging instance 'inst/multuply_buffer_reg[0][3]' (FDRE) to 'inst/multuply_buffer_reg[0][10]'
+INFO: [Synth 8-3886] merging instance 'inst/multuply_buffer_reg[0][4]' (FDRE) to 'inst/multuply_buffer_reg[0][10]'
+INFO: [Synth 8-3886] merging instance 'inst/multuply_buffer_reg[0][5]' (FDRE) to 'inst/multuply_buffer_reg[0][10]'
+INFO: [Synth 8-3886] merging instance 'inst/multuply_buffer_reg[0][6]' (FDRE) to 'inst/multuply_buffer_reg[0][10]'
+INFO: [Synth 8-3886] merging instance 'inst/multuply_buffer_reg[0][7]' (FDRE) to 'inst/multuply_buffer_reg[0][10]'
+INFO: [Synth 8-3886] merging instance 'inst/multuply_buffer_reg[0][8]' (FDRE) to 'inst/multuply_buffer_reg[0][10]'
+INFO: [Synth 8-3886] merging instance 'inst/multuply_buffer_reg[0][9]' (FDRE) to 'inst/multuply_buffer_reg[0][10]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\multuply_buffer_reg[0][10] )
+INFO: [Synth 8-3886] merging instance 'inst/multuply_buffer_reg[0][34]' (FDRE) to 'inst/multuply_buffer_reg[0][36]'
+INFO: [Synth 8-3886] merging instance 'inst/multuply_buffer_reg[0][35]' (FDRE) to 'inst/multuply_buffer_reg[0][36]'
+INFO: [Synth 8-3886] merging instance 'inst/m_axis_tdata_reg[0]' (FDRE) to 'inst/m_axis_tdata_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/m_axis_tdata_reg[1]' (FDRE) to 'inst/m_axis_tdata_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/m_axis_tdata_reg[2]' (FDRE) to 'inst/m_axis_tdata_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst/m_axis_tdata_reg[3]' (FDRE) to 'inst/m_axis_tdata_reg[4]'
+INFO: [Synth 8-3886] merging instance 'inst/m_axis_tdata_reg[4]' (FDRE) to 'inst/m_axis_tdata_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/m_axis_tdata_reg[5]' (FDRE) to 'inst/m_axis_tdata_reg[6]'
+INFO: [Synth 8-3886] merging instance 'inst/m_axis_tdata_reg[6]' (FDRE) to 'inst/m_axis_tdata_reg[7]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\m_axis_tdata_reg[7] )
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2237.977 ; gain = 505.629 ; free physical = 2391 ; free virtual = 18823
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping  Report (see note below)
++------------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name       | DSP Mapping     | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|axis_audio_filter | (C'+A'':B'')'   | 19     | 18     | 37     | -      | 40     | 2    | 2    | 1    | -    | -     | 0    | 1    | 
+|axis_audio_filter | (PCIN+A'':B'')' | 19     | 18     | -      | -      | 40     | 2    | 2    | -    | -    | -     | 0    | 1    | 
+|axis_audio_filter | (PCIN+A'':B'')' | 19     | 18     | -      | -      | 40     | 2    | 2    | -    | -    | -     | 0    | 1    | 
+|axis_audio_filter | (PCIN+A'':B'')' | 19     | 18     | -      | -      | 40     | 2    | 2    | -    | -    | -     | 0    | 1    | 
+|axis_audio_filter | (PCIN+A'':B'')' | 19     | 18     | -      | -      | 40     | 2    | 2    | -    | -    | -     | 0    | 1    | 
+|axis_audio_filter | (PCIN+A'':B'')' | 19     | 18     | -      | -      | 40     | 2    | 2    | -    | -    | -     | 0    | 1    | 
+|axis_audio_filter | (PCIN+A'':B'')' | 19     | 18     | -      | -      | 40     | 2    | 2    | -    | -    | -     | 0    | 1    | 
+|axis_audio_filter | (PCIN+A'':B'')' | 19     | 18     | -      | -      | 40     | 2    | 2    | -    | -    | -     | 0    | 1    | 
+|axis_audio_filter | (PCIN+A'':B'')' | 19     | 18     | -      | -      | 40     | 2    | 2    | -    | -    | -     | 0    | 1    | 
+|axis_audio_filter | (PCIN+A'':B'')' | 19     | 18     | -      | -      | 40     | 2    | 2    | -    | -    | -     | 0    | 1    | 
+|axis_audio_filter | (PCIN+A'':B'')' | 19     | 18     | -      | -      | 40     | 2    | 2    | -    | -    | -     | 0    | 1    | 
+|axis_audio_filter | (PCIN+A'':B'')' | 19     | 18     | -      | -      | 40     | 2    | 2    | -    | -    | -     | 0    | 1    | 
+|axis_audio_filter | (PCIN+A'':B'')' | 19     | 18     | -      | -      | 40     | 2    | 2    | -    | -    | -     | 0    | 1    | 
+|axis_audio_filter | (PCIN+A'':B'')' | 19     | 18     | -      | -      | 40     | 2    | 2    | -    | -    | -     | 0    | 1    | 
+|axis_audio_filter | (PCIN+A'':B'')' | 19     | 18     | -      | -      | 40     | 2    | 2    | -    | -    | -     | 0    | 1    | 
+|axis_audio_filter | (PCIN+A'':B'')' | 19     | 18     | -      | -      | 40     | 2    | 2    | -    | -    | -     | 0    | 1    | 
+|axis_audio_filter | (PCIN+A'':B'')' | 19     | 18     | -      | -      | 40     | 2    | 2    | -    | -    | -     | 0    | 1    | 
+|axis_audio_filter | (PCIN+A'':B'')' | 19     | 18     | -      | -      | 40     | 2    | 2    | -    | -    | -     | 0    | 1    | 
+|axis_audio_filter | (PCIN+A'':B'')' | 19     | 18     | -      | -      | 40     | 2    | 2    | -    | -    | -     | 0    | 1    | 
+|axis_audio_filter | (PCIN+A'':B'')' | 19     | 18     | -      | -      | 40     | 2    | 2    | -    | -    | -     | 0    | 1    | 
+|axis_audio_filter | (PCIN+A'':B'')' | 19     | 18     | -      | -      | 40     | 2    | 2    | -    | -    | -     | 0    | 1    | 
+|axis_audio_filter | (PCIN+A'':B'')' | 19     | 18     | -      | -      | 40     | 2    | 2    | -    | -    | -     | 0    | 1    | 
+|axis_audio_filter | (PCIN+A'':B'')' | 19     | 18     | -      | -      | 40     | 2    | 2    | -    | -    | -     | 0    | 1    | 
+|axis_audio_filter | (PCIN+A'':B'')' | 19     | 18     | -      | -      | 40     | 2    | 2    | -    | -    | -     | 0    | 1    | 
+|axis_audio_filter | (PCIN+A'':B'')' | 19     | 18     | -      | -      | 40     | 2    | 2    | -    | -    | -     | 0    | 1    | 
+|axis_audio_filter | (PCIN+A'':B'')' | 19     | 18     | -      | -      | 40     | 2    | 2    | -    | -    | -     | 0    | 1    | 
+|axis_audio_filter | (PCIN+A'':B'')' | 19     | 18     | -      | -      | 40     | 2    | 2    | -    | -    | -     | 0    | 1    | 
+|axis_audio_filter | (PCIN+A'':B'')' | 19     | 18     | -      | -      | 40     | 2    | 2    | -    | -    | -     | 0    | 1    | 
+|axis_audio_filter | (PCIN+A'':B'')' | 19     | 18     | -      | -      | 40     | 2    | 2    | -    | -    | -     | 0    | 1    | 
+|axis_audio_filter | (PCIN+A'':B'')' | 19     | 18     | -      | -      | 40     | 2    | 2    | -    | -    | -     | 0    | 1    | 
+|axis_audio_filter | (PCIN+A'':B'')' | 19     | 18     | -      | -      | 40     | 2    | 2    | -    | -    | -     | 0    | 1    | 
++------------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 2237.977 ; gain = 505.629 ; free physical = 2193 ; free virtual = 18647
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 2237.977 ; gain = 505.629 ; free physical = 2193 ; free virtual = 18647
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2237.977 ; gain = 505.629 ; free physical = 2182 ; free virtual = 18636
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6064] Net \inst/in_data_reg[23]_rep__2_n_0  is driving 87 big block pins (URAM, BRAM and DSP loads). Created 9 replicas of its driver. 
+INFO: [Synth 8-6064] Net \inst/in_data_reg[23]_rep__1_n_0  is driving 87 big block pins (URAM, BRAM and DSP loads). Created 9 replicas of its driver. 
+INFO: [Synth 8-6064] Net \inst/in_data_reg[23]_rep__0_n_0  is driving 87 big block pins (URAM, BRAM and DSP loads). Created 9 replicas of its driver. 
+INFO: [Synth 8-6064] Net \inst/in_data_reg[23]_rep_n_0  is driving 88 big block pins (URAM, BRAM and DSP loads). Created 9 replicas of its driver. 
+INFO: [Synth 8-6064] Net \inst/in_data [23] is driving 85 big block pins (URAM, BRAM and DSP loads). Created 9 replicas of its driver. 
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2237.977 ; gain = 505.629 ; free physical = 2182 ; free virtual = 18636
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2237.977 ; gain = 505.629 ; free physical = 2182 ; free virtual = 18636
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2237.977 ; gain = 505.629 ; free physical = 2182 ; free virtual = 18636
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2237.977 ; gain = 505.629 ; free physical = 2182 ; free virtual = 18636
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2237.977 ; gain = 505.629 ; free physical = 2182 ; free virtual = 18636
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2237.977 ; gain = 505.629 ; free physical = 2182 ; free virtual = 18636
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |DSP48E1 |    31|
+|2     |LUT1    |     2|
+|3     |LUT2    |     2|
+|4     |LUT3    |    27|
+|5     |FDRE    |   169|
++------+--------+------+
+
+Report Instance Areas: 
++------+---------+------------------+------+
+|      |Instance |Module            |Cells |
++------+---------+------------------+------+
+|1     |top      |                  |   231|
+|2     |  inst   |axis_audio_filter |   231|
++------+---------+------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2237.977 ; gain = 505.629 ; free physical = 2182 ; free virtual = 18636
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 9 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2237.977 ; gain = 137.617 ; free physical = 2235 ; free virtual = 18689
+Synthesis Optimization Complete : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2237.977 ; gain = 505.629 ; free physical = 2235 ; free virtual = 18689
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 31 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2253.992 ; gain = 0.000 ; free physical = 2208 ; free virtual = 18642
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+147 Infos, 19 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2253.992 ; gain = 535.230 ; free physical = 2253 ; free virtual = 18687
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2253.992 ; gain = 0.000 ; free physical = 2253 ; free virtual = 18687
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint '/home/maniek/Vivado/audio-effect-box/audio-effect-box.runs/audio_processing_axis_audio_filter_0_0_synth_1/audio_processing_axis_audio_filter_0_0.dcp' has been generated.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2278.004 ; gain = 0.000 ; free physical = 2268 ; free virtual = 18703
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint '/home/maniek/Vivado/audio-effect-box/audio-effect-box.runs/audio_processing_axis_audio_filter_0_0_synth_1/audio_processing_axis_audio_filter_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file audio_processing_axis_audio_filter_0_0_utilization_synth.rpt -pb audio_processing_axis_audio_filter_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Jun 20 19:02:07 2023...

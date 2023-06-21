@@ -1,0 +1,12 @@
+
+{ 
+    crc :  6110362564425853011  , 
+    ccp_crc :  0  , 
+    cmdline : " -wto b9b863eb98754a1aa6106d843057c254 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L axi_infrastructure_v1_1_0 -L axi_vip_v1_1_4 -L processing_system7_vip_v1_0_6 -L lib_cdc_v1_0_2 -L proc_sys_reset_v5_0_13 -L generic_baseblocks_v2_1_0 -L fifo_generator_v13_2_3 -L axi_data_fifo_v2_1_17 -L axi_register_slice_v2_1_18 -L axi_protocol_converter_v2_1_18 -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot audio_processing_wrapper_behav xil_defaultlib.audio_processing_wrapper xil_defaultlib.glbl" , 
+    buildDate : "Dec  6 2018" , 
+    buildTime : "23:39:36" , 
+    linkCmd : "/usr/bin/gcc -Wa,-W  -O -fPIC  -m64  -Wl,--no-as-needed  -Wl,--unresolved-symbols=ignore-all  -o \"xsim.dir/audio_processing_wrapper_behav/xsimk\"   \"xsim.dir/audio_processing_wrapper_behav/obj/xsim_0.lnx64.o\" \"xsim.dir/audio_processing_wrapper_behav/obj/xsim_1.lnx64.o\" \"xsim.dir/audio_processing_wrapper_behav/obj/xsim_2.lnx64.o\" \"xsim.dir/audio_processing_wrapper_behav/obj/xsim_3.lnx64.o\" \"xsim.dir/audio_processing_wrapper_behav/obj/xsim_4.lnx64.o\" \"xsim.dir/audio_processing_wrapper_behav/obj/xsim_5.lnx64.o\" \"xsim.dir/audio_processing_wrapper_behav/obj/xsim_6.lnx64.o\" \"xsim.dir/audio_processing_wrapper_behav/obj/xsim_7.lnx64.o\" \"xsim.dir/audio_processing_wrapper_behav/obj/xsim_8.lnx64.o\" \"xsim.dir/audio_processing_wrapper_behav/obj/xsim_9.lnx64.o\" \"xsim.dir/audio_processing_wrapper_behav/obj/xsim_10.lnx64.o\" -L\"/mnt/HGST/Programy/Xilinx/Vivado/2018.3/lib/lnx64.o\" -lrdi_simulator_kernel  -lrdi_simbridge_kernel" , 
+    aggregate_nets : 
+    [ 
+    ] 
+} 

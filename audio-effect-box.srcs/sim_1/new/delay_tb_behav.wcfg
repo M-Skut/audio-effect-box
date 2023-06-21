@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="delay_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="delay_tb" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="1897333333fs"></ZoomStartTime>
+      <ZoomEndTime time="2020533334fs"></ZoomEndTime>
+      <Cursor1Time time="1940533000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="175"></NameColumnWidth>
+      <ValueColumnWidth column_width="142"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="10" />
+   <wvobject type="logic" fp_name="/delay_tb/aresetn">
+      <obj_property name="ElementShortName">aresetn</obj_property>
+      <obj_property name="ObjectShortName">aresetn</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/delay_tb/aclk">
+      <obj_property name="ElementShortName">aclk</obj_property>
+      <obj_property name="ObjectShortName">aclk</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/delay_tb/input_axis_ready">
+      <obj_property name="ElementShortName">input_axis_ready</obj_property>
+      <obj_property name="ObjectShortName">input_axis_ready</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/delay_tb/input_axis_valid">
+      <obj_property name="ElementShortName">input_axis_valid</obj_property>
+      <obj_property name="ObjectShortName">input_axis_valid</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/delay_tb/output_axis_ready">
+      <obj_property name="ElementShortName">output_axis_ready</obj_property>
+      <obj_property name="ObjectShortName">output_axis_ready</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/delay_tb/output_axis_valid">
+      <obj_property name="ElementShortName">output_axis_valid</obj_property>
+      <obj_property name="ObjectShortName">output_axis_valid</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/delay_tb/bypass_effect">
+      <obj_property name="ElementShortName">bypass_effect</obj_property>
+      <obj_property name="ObjectShortName">bypass_effect</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/delay_tb/input_data">
+      <obj_property name="ElementShortName">input_data[31:0]</obj_property>
+      <obj_property name="ObjectShortName">input_data[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/delay_tb/output_data">
+      <obj_property name="ElementShortName">output_data[31:0]</obj_property>
+      <obj_property name="ObjectShortName">output_data[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/delay_tb/DUT/new_sample_ready">
+      <obj_property name="ElementShortName">new_sample_ready</obj_property>
+      <obj_property name="ObjectShortName">new_sample_ready</obj_property>
+   </wvobject>
+</wave_config>

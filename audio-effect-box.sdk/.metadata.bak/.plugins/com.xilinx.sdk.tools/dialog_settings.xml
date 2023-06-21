@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="" key="audio_processing_wrapper_hw_platform_0-offSet"/>
+	<item value="audio_processing_wrapper_hw_platform_0" key="programflash.hwplatform"/>
+	<item value="qspi-x4-single" key="audio_processing_wrapper_hw_platform_0-flashType"/>
+	<item value="false" key="audio_processing_wrapper_hw_platform_0-blankCheck"/>
+	<item value="Auto Detect" key="audio_processing_wrapper_hw_platform_0-device"/>
+	<item value="" key="audio_processing_wrapper_hw_platform_0-fsblFile"/>
+	<item value="" key="audio_processing_wrapper_hw_platform_0-imgFile"/>
+	<item value="false" key="audio_processing_wrapper_hw_platform_0-verifyFlash"/>
+	<item value="Local" key="audio_processing_wrapper_hw_platform_0-target"/>
+</section>

@@ -1,0 +1,12 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../audio-effect-box.srcs/sources_1/imports/rtl/stereo_to_mono.vhdl" \
+"../../../../audio-effect-box.srcs/sources_1/new/sample_to_leds.vhd" \
+"../../../../audio-effect-box.srcs/sources_1/imports/rtl/delay.vhdl" \
+"../../../../audio-effect-box.srcs/sources_1/imports/rtl/distortion.vhdl" \
+"../../../../audio-effect-box.ip_user_files/bd/audio_processing/ip/audio_processing_rst_ps7_0_50M_0/sim/audio_processing_rst_ps7_0_50M_0.vhd" \
+"../../../../audio-effect-box.ip_user_files/bd/audio_processing/ip/audio_processing_axi_gpio_0_0/sim/audio_processing_axi_gpio_0_0.vhd" \
+"../../../../audio-effect-box.ip_user_files/bd/audio_processing/ip/audio_processing_axi_gpio_0_1/sim/audio_processing_axi_gpio_0_1.vhd" \
+
+# Do not sort compile order
+nosort

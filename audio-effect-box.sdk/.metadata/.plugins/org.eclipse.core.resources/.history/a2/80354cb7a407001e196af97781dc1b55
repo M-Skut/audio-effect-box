@@ -1,0 +1,219 @@
+#include <stdint.h>
+#include "menu.hpp"
+#include "sleep.h"
+#include "../resources/icons.h"
+#include "xgpio.h"
+
+Ssd1306 Menu::m_display;
+NanoCanvas<128, 32, 1> Menu::m_canvas;
+Menu::menu_item_t Menu::current_menu_item = LED_CONTROL;
+Menu::menu_state_t Menu::current_menu_state = IDLE;
+XGpio Menu::effect_control;
+XGpio Menu::buttons;
+uint32_t Menu::buttons_data;
+
+bool Menu::leds_enabled = true;
+bool Menu::delay_enabled = true;
+bool Menu::distortion_enabled = true;
+bool Menu::tremolo_enabled = true;
+bool Menu::filter_enabled = true;
+
+void Menu::init() {
+	XGpio_Initialize(&effect_control, XPAR_EFFECT_CONTROL_DEVICE_ID);
+	XGpio_SetDataDirection(&effect_control, 1, 0x0);
+	XGpio_Initialize(&buttons, XPAR_GPIO_BUTTONS_DEVICE_ID);
+	XGpio_SetDataDirection(&buttons, 1, 0xF);
+	m_display.powerOn();
+	sleep(1);
+	m_display.send(Ssd1306::EntireDisplayOn);
+	redrawScreen();
+	redrawSettings();
+	show();
+	setOutputs();
+}
+
+void Menu::setOutputs() {
+	uint32_t output_data = 0;
+	output_data |= leds_enabled;
+	output_data |= (!delay_enabled) << 1;
+	output_data |= (!distortion_enabled) << 2;
+	output_data |= (!tremolo_enabled) << 3;
+	output_data |= (!filter_enabled) << 4;
+	XGpio_DiscreteWrite(&effect_control, 1, output_data);
+}
+
+void Menu::redrawScreen() {
+	m_canvas.clear();
+	m_canvas.drawBitmap1(2, 7, 24, 24, led_icon);
+	m_canvas.drawBitmap1(26, 7, 24, 24, delay_icon);
+	m_canvas.drawBitmap1(51, 7, 24, 24, distortion_icon);
+	m_canvas.drawBitmap1(76, 7, 24, 24, tremolo_icon);
+	m_canvas.drawBitmap1(102, 7, 24, 24, filter_icon);
+	m_canvas.drawRect(0, 0, 127, 31);
+	m_canvas.drawRect(0, 3, 127, 6);
+
+	m_canvas.drawLine(25, 0, 25, 31);
+	m_canvas.drawLine(50, 0, 50, 31);
+	m_canvas.drawLine(75, 0, 75, 31);
+	m_canvas.drawLine(100, 0, 100, 32);
+	m_canvas.drawLine(1, 0, 1, 31);
+	m_canvas.drawLine(126, 0, 126, 31);
+
+}
+
+void Menu::redrawSettings() {
+	// Clear all boxes
+	m_canvas.setColor(BLACK);
+	for (uint8_t i = 0; i < 4; i++) {
+		m_canvas.drawRect(2 + (25 * i), 1, 26 + (25 * i), 2);
+		m_canvas.drawRect(2 + (25 * i), 3, 26 + (25 * i), 4);
+	}
+	m_canvas.setColor(WHITE);
+	// Color currently enabled boxes
+	if (leds_enabled)
+		m_canvas.drawRect(2, 4, 26, 5);
+	if (delay_enabled)
+		m_canvas.drawRect(27, 4, 51, 5);
+	if (distortion_enabled)
+		m_canvas.drawRect(52, 4, 76, 5);
+	if (tremolo_enabled)
+		m_canvas.drawRect(77, 4, 101, 5);
+	if (filter_enabled)
+		m_canvas.drawRect(102, 4, 126, 5);
+
+	// Color currently selected menu item
+	if (current_menu_item == LED_CONTROL)
+		m_canvas.drawRect(2, 1, 26, 2);
+	if (current_menu_item == DELAY_CONTROL)
+		m_canvas.drawRect(27, 1, 51, 2);
+	if (current_menu_item == DISTORTION_CONTROL)
+		m_canvas.drawRect(52, 1, 76, 2);
+	if (current_menu_item == TREMOLO_CONTROL)
+		m_canvas.drawRect(77, 1, 101, 2);
+	if (current_menu_item == FILTER_CONTROL)
+		m_canvas.drawRect(102, 1, 126, 2);
+
+}
+
+void Menu::show() {
+	m_display.send(Ssd1306::ColumnAddress, 0, 127);
+	m_display.send(Ssd1306::PageAddress, 0, 3);
+	m_display.send(m_canvas.getData(),
+			(m_canvas.width() * m_canvas.height()) / 8);
+	m_display.send(Ssd1306::EntireDisplayResume);
+}
+
+bool Menu::debouncePin(uint32_t pin) {
+	usleep(10000);
+	buttons_data = XGpio_DiscreteRead(&buttons, 1);
+	if (buttons_data & pin)
+		return true;
+	else
+		return false;
+}
+
+void Menu::toggleMenuItem() {
+	if (current_menu_item == LED_CONTROL)
+		leds_enabled = !leds_enabled;
+	else if (current_menu_item == DELAY_CONTROL)
+		delay_enabled = !delay_enabled;
+	else if (current_menu_item == DISTORTION_CONTROL)
+		distortion_enabled = !distortion_enabled;
+	else if (current_menu_item == TREMOLO_CONTROL)
+		tremolo_enabled = !tremolo_enabled;
+	else if (current_menu_item == FILTER_CONTROL)
+		filter_enabled = !filter_enabled;
+}
+
+void Menu::changeSelection(bool invert_direction) {
+	if (invert_direction) {
+		switch (current_menu_item) {
+		case LED_CONTROL: {
+			current_menu_item = FILTER_CONTROL;
+			break;
+		}
+		case DELAY_CONTROL: {
+			current_menu_item = LED_CONTROL;
+			break;
+		}
+		case DISTORTION_CONTROL: {
+			current_menu_item = DELAY_CONTROL;
+			break;
+		}
+		case TREMOLO_CONTROL: {
+			current_menu_item = DISTORTION_CONTROL;
+			break;
+		}
+		case FILTER_CONTROL: {
+			current_menu_item = TREMOLO_CONTROL;
+			break;
+		}
+		}
+	} else {
+		switch (current_menu_item) {
+		case LED_CONTROL: {
+			current_menu_item = DELAY_CONTROL;
+			break;
+		}
+		case DELAY_CONTROL: {
+			current_menu_item = DISTORTION_CONTROL;
+			break;
+		}
+		case DISTORTION_CONTROL: {
+			current_menu_item = TREMOLO_CONTROL;
+			break;
+		}
+		case TREMOLO_CONTROL: {
+			current_menu_item = FILTER_CONTROL;
+			break;
+		}
+		case FILTER_CONTROL: {
+			current_menu_item = LED_CONTROL;
+			break;
+		}
+		}
+	}
+}
+
+void Menu::processMenu() {
+	buttons_data = XGpio_DiscreteRead(&buttons, 1);
+
+	switch (current_menu_state) {
+	case IDLE: {
+		// Center pin
+		if (buttons_data & 0x1) {
+			if (!debouncePin(0x1))
+				return;
+			toggleMenuItem();
+			setOutputs();
+			current_menu_state = BUTTON_PRESSED;
+		} else if (buttons_data & 0x4) { // Move manu to right
+			if (!debouncePin(0x4))
+				return;
+			changeSelection(true);
+
+			current_menu_state = BUTTON_PRESSED;
+		} else if (buttons_data & 0x8) { // Move manu to left
+			if (!debouncePin(0x8))
+				return;
+			changeSelection(false);
+
+			current_menu_state = BUTTON_PRESSED;
+		}
+
+		redrawSettings();
+
+		break;
+	}
+	case BUTTON_PRESSED: {
+		if (buttons_data == 0) current_menu_state = IDLE;
+		break;
+	}
+	default: {
+		current_menu_state = IDLE;
+		break;
+	}
+	}
+
+	show();
+}

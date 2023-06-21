@@ -1,0 +1,25 @@
+#include "xil_io.h"
+#include "adau1761_controller.h"
+#include "../resources/doom-u32.h"
+#include "xparameters.h"
+#include "../lib/ssd1306.hpp"
+#include "xstatus.h"
+#include "sleep.h"
+#include "../canvas/canvas.h"
+#include "../resources/icons.h"
+#include "codec.hpp"
+#include "menu.hpp"
+
+Codec audio_codec;
+Menu oled_menu;
+
+int main(void) {
+	audio_codec.init_codec();
+	oled_menu.init();
+
+	while (true) {
+		oled_menu.processMenu();
+		usleep(1000);
+	}
+    return 0;
+}

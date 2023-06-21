@@ -1,0 +1,7 @@
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+ERROR: Index 101 out of bound 0 to 100
+Time: 3050 ns  Iteration: 0  Process: /tremolo_tb/input/line__61
+  File: /home/maniek/Vivado/audio-effect-box/audio-effect-box.srcs/sim_1/new/axis_file_input.vhdl
+
+HDL Line: /home/maniek/Vivado/audio-effect-box/audio-effect-box.srcs/sim_1/new/axis_file_input.vhdl:67

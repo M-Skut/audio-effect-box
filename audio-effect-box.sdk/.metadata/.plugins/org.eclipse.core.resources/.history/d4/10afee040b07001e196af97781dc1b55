@@ -1,0 +1,30 @@
+#pragma once
+
+#include <stdint.h>
+#include "../lib/ssd1306.hpp"
+#include "../canvas/canvas.h"
+
+class Menu {
+	private:
+		static Ssd1306 m_display;
+		static NanoCanvas<128,32,1> m_canvas;
+		enum menu_state_t {
+			IDLE,
+			BUTTON_PRESSED,
+			BUTTON_HOLD,
+		};
+		enum menu_item_t {
+			LED_CONTROL,
+			DELAY_CONTROL,
+			DISTORTION_CONTROL,
+			TREMOLO_CONTROL,
+			FILTER_CONTROL
+		};
+
+		static menu_item_t current_menu_item;
+		static menu_state_t current_menu_state;
+		void redrawScreen();
+	public:
+		void processMenu();
+		void init();
+};

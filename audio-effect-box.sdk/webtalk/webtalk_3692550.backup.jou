@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+# 
+# Start of session at: Sat Apr 22 21:47:29 2023
+# Process ID: 3692550
+# Current directory: /home/maniek/Vivado/audio-effect-box/audio-effect-box.sdk/webtalk
+# Command line: wbtcv -mode batch -source sdk_webtalk.tcl
+# Log file: /home/maniek/Vivado/audio-effect-box/audio-effect-box.sdk/webtalk/webtalk.log
+# Journal file: /home/maniek/Vivado/audio-effect-box/audio-effect-box.sdk/webtalk/webtalk.jou
+#-----------------------------------------------------------
+source sdk_webtalk.tcl

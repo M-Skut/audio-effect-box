@@ -1,0 +1,35 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../audio-effect-box.srcs/sources_1/bd/audio_processing/ipshared/85a3" --include "../../../../audio-effect-box.srcs/sources_1/bd/audio_processing/ipshared/ec67/hdl" --include "../../../../audio-effect-box.srcs/sources_1/bd/audio_processing/ipshared/70cf/hdl" --include "../../../../audio-effect-box.srcs/sources_1/bd/audio_processing/ipshared/3dda/src" --include "/mnt/HGST/Programy/Xilinx/Vivado/2018.3/data/xilinx_vip/include" \
+"../../../../audio-effect-box.ip_user_files/bd/audio_processing/ipshared/8b94/hdl/adau1761_controller_v1_0_S00_AXI.v" \
+"../../../../audio-effect-box.ip_user_files/bd/audio_processing/ipshared/8b94/hdl/adau1761_spi.v" \
+"../../../../audio-effect-box.ip_user_files/bd/audio_processing/ipshared/8b94/hdl/adau1761_controller_v1_0.v" \
+"../../../../audio-effect-box.ip_user_files/bd/audio_processing/ip/audio_processing_adau1761_controller_0_0/sim/audio_processing_adau1761_controller_0_0.v" \
+"../../../../audio-effect-box.ip_user_files/bd/audio_processing/ip/audio_processing_clk_wiz_0_0/audio_processing_clk_wiz_0_0_clk_wiz.v" \
+"../../../../audio-effect-box.ip_user_files/bd/audio_processing/ip/audio_processing_clk_wiz_0_0/audio_processing_clk_wiz_0_0.v" \
+"../../../../audio-effect-box.ip_user_files/bd/audio_processing/ip/audio_processing_i2s_receiver_0_0/audio_processing_i2s_receiver_0_0_sim_netlist.v" \
+"../../../../audio-effect-box.ip_user_files/bd/audio_processing/ip/audio_processing_i2s_transmitter_0_0/audio_processing_i2s_transmitter_0_0_sim_netlist.v" \
+"../../../../audio-effect-box.ip_user_files/bd/audio_processing/ip/audio_processing_processing_system7_0_0/sim/audio_processing_processing_system7_0_0.v" \
+"../../../../audio-effect-box.ip_user_files/bd/audio_processing/sim/audio_processing.v" \
+"../../../../audio-effect-box.ip_user_files/bd/audio_processing/ip/audio_processing_stereo_to_mono_0_0/sim/audio_processing_stereo_to_mono_0_0.v" \
+"../../../../audio-effect-box.ip_user_files/bd/audio_processing/ip/audio_processing_xbar_0/sim/audio_processing_xbar_0.v" \
+"../../../../audio-effect-box.ip_user_files/bd/audio_processing/ip/audio_processing_sample_to_leds_0_0/sim/audio_processing_sample_to_leds_0_0.v" \
+"../../../../audio-effect-box.ip_user_files/bd/audio_processing/ip/audio_processing_ssd1306_driver_0_0/ip/sim/power_on_off_sequence.v" \
+"../../../../audio-effect-box.ip_user_files/bd/audio_processing/ipshared/3dda/src/spi-master.v" \
+"../../../../audio-effect-box.ip_user_files/bd/audio_processing/ipshared/3dda/src/ssd1306-driver.v" \
+"../../../../audio-effect-box.ip_user_files/bd/audio_processing/ipshared/3dda/src/timer.v" \
+"../../../../audio-effect-box.ip_user_files/bd/audio_processing/ipshared/3dda/hdl/ssd1306_driver_v1_0.v" \
+"../../../../audio-effect-box.ip_user_files/bd/audio_processing/ipshared/3dda/hdl/ssd1306_driver_v1_0_S00_AXI.v" \
+"../../../../audio-effect-box.ip_user_files/bd/audio_processing/ip/audio_processing_ssd1306_driver_0_0/sim/audio_processing_ssd1306_driver_0_0.v" \
+"../../../../audio-effect-box.ip_user_files/bd/audio_processing/ip/audio_processing_axis_audio_delay_0_0/sim/audio_processing_axis_audio_delay_0_0.v" \
+"../../../../audio-effect-box.ip_user_files/bd/audio_processing/ip/audio_processing_xlslice_0_0/sim/audio_processing_xlslice_0_0.v" \
+"../../../../audio-effect-box.ip_user_files/bd/audio_processing/ip/audio_processing_xlslice_0_1/sim/audio_processing_xlslice_0_1.v" \
+"../../../../audio-effect-box.ip_user_files/bd/audio_processing/ip/audio_processing_axis_audio_distortion_0_0/sim/audio_processing_axis_audio_distortion_0_0.v" \
+"../../../../audio-effect-box.ip_user_files/bd/audio_processing/ip/audio_processing_xlslice_0_2/sim/audio_processing_xlslice_0_2.v" \
+"../../../../audio-effect-box.ip_user_files/bd/audio_processing/ip/audio_processing_auto_pc_0/sim/audio_processing_auto_pc_0.v" \
+"../../../../audio-effect-box.srcs/sources_1/bd/audio_processing/hdl/audio_processing_wrapper.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

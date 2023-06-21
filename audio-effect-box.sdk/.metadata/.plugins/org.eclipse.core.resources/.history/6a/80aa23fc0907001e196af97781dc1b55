@@ -1,0 +1,39 @@
+#include <stdint.h>
+#include "menu.hpp"
+#include "sleep.h"
+#include "../resources/icons.h"
+
+static Menu::Ssd1306 m_display;
+static Menu::NanoCanvas<128,32,1> m_canvas;
+
+void Menu::init() {
+	current_menu_item = LED_CONTROL;
+	current_menu_state = IDLE;
+	m_display.powerOn();
+	sleep(1);
+	m_display.send(Ssd1306::EntireDisplayOn);
+	redrawScreen();
+}
+
+void Menu::redrawScreen() {
+    m_canvas.clear();
+    m_canvas.drawBitmap1(2, 7, 24, 24, led_icon);
+    m_canvas.drawBitmap1(26, 7, 24, 24, delay_icon);
+    m_canvas.drawBitmap1(51, 7, 24, 24, distortion_icon);
+    m_canvas.drawBitmap1(76, 7, 24, 24, tremolo_icon);
+    m_canvas.drawBitmap1(102, 7, 24, 24, filter_icon);
+    m_canvas.drawRect(0, 0, 127, 31);
+    m_canvas.drawRect(0, 3, 127, 6);
+
+    m_canvas.drawLine(25, 0, 25, 31);
+    m_canvas.drawLine(50, 0, 50, 31);
+    m_canvas.drawLine(75, 0, 75, 31);
+    m_canvas.drawLine(100, 0, 100, 32);
+    m_canvas.drawLine(1, 0, 1, 31);
+    m_canvas.drawLine(126, 0, 126, 31);
+
+    m_display.send(Ssd1306::ColumnAddress, 0, 127);
+    m_display.send(Ssd1306::PageAddress, 0, 3);
+    m_display.send(m_canvas.getData(), (m_canvas.width() * m_canvas.height()) / 8);
+    m_display.send(Ssd1306::EntireDisplayResume);
+}

@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../audio-effect-box.srcs/sources_1/new/sample_to_leds.vhd" \
+"../../../../audio-effect-box.srcs/sim_1/new/sample_to_leds_tb.vhd" \
+
+# Do not sort compile order
+nosort

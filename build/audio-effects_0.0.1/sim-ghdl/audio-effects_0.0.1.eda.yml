@@ -1,0 +1,40 @@
+dependencies:
+  ::audio-effects:0.0.1: []
+files:
+- core: ::audio-effects:0.0.1
+  file_type: vhdlSource
+  name: src/audio-effects_0.0.1/audio-effect-box.srcs/sim_blocks/new/sample_to_leds_tb.vhd
+- core: ::audio-effects:0.0.1
+  file_type: vhdlSource
+  name: src/audio-effects_0.0.1/audio-effect-box.srcs/sources_1/new/sample_to_leds.vhd
+- core: ::audio-effects:0.0.1
+  file_type: vhdlSource
+  name: src/audio-effects_0.0.1/audio-effect-box.srcs/sources_1/imports/rtl/stereo_to_mono.vhdl
+- core: ::audio-effects:0.0.1
+  file_type: vhdlSource
+  name: src/audio-effects_0.0.1/audio-effect-box.srcs/sim_blocks/new/stereo_to_mono_tb.vhdl
+- core: ::audio-effects:0.0.1
+  file_type: vhdlSource
+  name: src/audio-effects_0.0.1/audio-effect-box.srcs/sim_blocks/new/sample_to_leds_tb.vhd
+- core: ::audio-effects:0.0.1
+  file_type: vhdlSource
+  name: src/audio-effects_0.0.1/audio-effect-box.srcs/sources_1/new/sample_to_leds.vhd
+- core: ::audio-effects:0.0.1
+  file_type: vhdlSource
+  name: src/audio-effects_0.0.1/audio-effect-box.srcs/sources_1/imports/rtl/stereo_to_mono.vhdl
+- core: ::audio-effects:0.0.1
+  file_type: vhdlSource
+  name: src/audio-effects_0.0.1/audio-effect-box.srcs/sim_blocks/new/stereo_to_mono_tb.vhdl
+flow_options: {}
+hooks: {}
+name: audio-effects_0.0.1
+parameters: {}
+tool_options:
+  ghdl:
+    analyze_options:
+    - --ieee=standard
+    run_options:
+    - --wave=run.ghw --stop-time=10us
+toplevel: stereo_to_mono_tb
+version: 0.2.1
+vpi: []

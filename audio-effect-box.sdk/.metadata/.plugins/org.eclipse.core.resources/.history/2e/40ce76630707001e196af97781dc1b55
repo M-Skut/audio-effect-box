@@ -1,0 +1,6 @@
+#include <stdint.h>
+#include "codec.hpp"
+
+Codec::Codec {
+
+}

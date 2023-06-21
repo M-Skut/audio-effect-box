@@ -1,0 +1,92 @@
+{
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 6.8.11  2018-08-07 bk=1.4403 VDI=40 GEI=35 GUI=JA:9.0 TLS
+#  -string -flagsOSRD
+preplace port ssd1306_dc_0 -pg 1 -y 1060 -defaultsOSRD
+preplace port adau1761_cclk_0 -pg 1 -y 60 -defaultsOSRD
+preplace port adau1761_bclk_0 -pg 1 -y 640 -defaultsOSRD
+preplace port DDR -pg 1 -y 470 -defaultsOSRD
+preplace port ssd1306_sclk_0 -pg 1 -y 1120 -defaultsOSRD
+preplace port ssd1306_reset_0 -pg 1 -y 1000 -defaultsOSRD
+preplace port btns_5bits -pg 1 -y 240 -defaultsOSRD
+preplace port adau1761_adc_sdata_0 -pg 1 -y 700 -defaultsOSRD
+preplace port ssd1306_vdd_0 -pg 1 -y 970 -defaultsOSRD
+preplace port adau1761_lrclk_0 -pg 1 -y 670 -defaultsOSRD
+preplace port adau1761_cout_0 -pg 1 -y 80 -defaultsOSRD
+preplace port adau1761_cdata_0 -pg 1 -y 120 -defaultsOSRD
+preplace port adau1761_clatchn_0 -pg 1 -y 90 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -y 500 -defaultsOSRD
+preplace port ssd1306_vcc_0 -pg 1 -y 1030 -defaultsOSRD
+preplace port adau1761_mclk -pg 1 -y 690 -defaultsOSRD
+preplace port ssd1306_sdin_0 -pg 1 -y 1090 -defaultsOSRD
+preplace port adau1761_dac_sdata_0 -pg 1 -y 850 -defaultsOSRD
+preplace portBus leds -pg 1 -y 1240 -defaultsOSRD
+preplace inst rst_ps7_0_50M -pg 1 -lvl 1 -y 820 -defaultsOSRD
+preplace inst xlslice_0 -pg 1 -lvl 3 -y 990 -defaultsOSRD
+preplace inst i2s_transmitter_0 -pg 1 -lvl 8 -y 850 -defaultsOSRD
+preplace inst xlslice_1 -pg 1 -lvl 7 -y 1270 -defaultsOSRD
+preplace inst xlslice_2 -pg 1 -lvl 4 -y 1020 -defaultsOSRD
+preplace inst sample_to_leds_0 -pg 1 -lvl 8 -y 1240 -defaultsOSRD
+preplace inst xlslice_3 -pg 1 -lvl 5 -y 1050 -defaultsOSRD
+preplace inst stereo_to_mono_0 -pg 1 -lvl 3 -y 870 -defaultsOSRD
+preplace inst xlslice_4 -pg 1 -lvl 6 -y 1080 -defaultsOSRD
+preplace inst axis_audio_filter_0 -pg 1 -lvl 7 -y 980 -defaultsOSRD
+preplace inst effect_control -pg 1 -lvl 8 -y 380 -defaultsOSRD
+preplace inst axis_audio_distortion_0 -pg 1 -lvl 5 -y 920 -defaultsOSRD
+preplace inst i2s_receiver_0 -pg 1 -lvl 2 -y 660 -defaultsOSRD
+preplace inst ssd1306_driver_0 -pg 1 -lvl 8 -y 1050 -defaultsOSRD
+preplace inst ps7_0_axi_periph -pg 1 -lvl 7 -y 670 -defaultsOSRD
+preplace inst axis_audio_delay_0 -pg 1 -lvl 4 -y 890 -defaultsOSRD
+preplace inst clk_wiz_0 -pg 1 -lvl 8 -y 700 -defaultsOSRD
+preplace inst axis_audio_tremolo_0 -pg 1 -lvl 6 -y 950 -defaultsOSRD
+preplace inst adau1761_controller_0 -pg 1 -lvl 8 -y 90 -defaultsOSRD
+preplace inst gpio_buttons -pg 1 -lvl 8 -y 240 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 6 -y 550 -defaultsOSRD
+preplace netloc processing_system7_0_DDR 1 6 3 NJ 470 NJ 470 NJ
+preplace netloc ps7_0_axi_periph_M02_AXI 1 7 1 2410
+preplace netloc effect_control_gpio_io_o 1 2 7 710 1050 1010 1080 1300 1110 1580 1140 2010 460 NJ 460 2740
+preplace netloc ssd1306_driver_0_ssd1306_reset 1 8 1 2740J
+preplace netloc axis_audio_distortion_0_m_axis 1 5 1 N
+preplace netloc xlslice_4_Dout 1 6 1 2040J
+preplace netloc xlslice_3_Dout 1 5 1 1580J
+preplace netloc xlslice_1_Dout 1 7 1 NJ
+preplace netloc ssd1306_driver_0_ssd1306_dc 1 8 1 2740J
+preplace netloc axis_audio_filter_0_m_axis 1 7 1 2440
+preplace netloc i2s_receiver_0_M_AXIS 1 2 1 710
+preplace netloc ssd1306_driver_0_ssd1306_sclk 1 8 1 2740J
+preplace netloc processing_system7_0_M_AXI_GP0 1 6 1 2060
+preplace netloc axis_audio_delay_0_m_axis 1 4 1 N
+preplace netloc adau1761_adc_sdata_0_1 1 0 2 NJ 700 NJ
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 8 30 720 400J 770 700J 780 NJ 780 NJ 780 NJ 780 2020 850 2390
+preplace netloc i2s_transmitter_0_sd 1 8 1 NJ
+preplace netloc ps7_0_axi_periph_M03_AXI 1 7 1 2400
+preplace netloc stereo_to_mono_0_m_axis 1 3 1 N
+preplace netloc gpio_buttons_GPIO 1 8 1 NJ
+preplace netloc ps7_0_axi_periph_M01_AXI 1 7 1 2410
+preplace netloc ssd1306_driver_0_ssd1306_vcc 1 8 1 NJ
+preplace netloc rst_ps7_0_50M_interconnect_aresetn 1 1 6 390J 390 NJ 390 NJ 390 NJ 390 NJ 390 2070
+preplace netloc adau1761_controller_0_adau1761_cclk 1 8 1 2740J
+preplace netloc processing_system7_0_FIXED_IO 1 6 3 NJ 490 NJ 490 2740J
+preplace netloc xlslice_2_Dout 1 4 1 1300J
+preplace netloc rst_ps7_0_50M_peripheral_aresetn 1 1 7 440 790 700 790 1010 790 1290 830 1570 830 2050 480 2430
+preplace netloc clk_wiz_0_clk_out1 1 8 1 NJ
+preplace netloc adau1761_cout_0_1 1 0 8 NJ 80 NJ 80 NJ 80 NJ 80 NJ 80 NJ 80 NJ 80 NJ
+preplace netloc adau1761_controller_0_adau1761_clatchn 1 8 1 NJ
+preplace netloc ssd1306_driver_0_ssd1306_sdin 1 8 1 NJ
+preplace netloc processing_system7_0_FCLK_CLK0 1 0 8 20 710 420 780 720 770 1030 770 1310 770 1590 410 2030 410 2420
+preplace netloc Net1 1 0 8 NJ 670 410 760 NJ 760 NJ 760 NJ 760 NJ 760 2000J 890 NJ
+preplace netloc Net 1 0 8 NJ 640 430 400 NJ 400 NJ 400 NJ 400 NJ 400 NJ 400 2380J
+preplace netloc ps7_0_axi_periph_M00_AXI 1 7 1 2390
+preplace netloc stereo_to_mono_0_raw_sample 1 3 5 1000 800 NJ 800 NJ 800 1990J 870 2370J
+preplace netloc sample_to_leds_0_leds 1 8 1 NJ
+preplace netloc adau1761_controller_0_adau1761_cdata 1 8 1 2740J
+preplace netloc axis_audio_tremolo_0_m_axis 1 6 1 N
+preplace netloc xlslice_0_Dout 1 3 1 1020J
+preplace netloc ssd1306_driver_0_ssd1306_vdd 1 8 1 2740J
+levelinfo -pg 1 0 210 570 860 1160 1440 1790 2220 2590 2760 -top 0 -bot 1330
+"
+}
+{
+   "da_axi4_cnt":"7",
+   "da_board_cnt":"4"
+}

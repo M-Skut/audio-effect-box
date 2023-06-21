@@ -1,0 +1,9 @@
+#pragma once
+
+#include <stdint.h>
+
+class Codec {
+public:
+	static void init_codec();
+
+};

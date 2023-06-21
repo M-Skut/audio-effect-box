@@ -1,0 +1,28 @@
+CAPI=2:
+name : ::audio-effects:0.0.1
+
+filesets:
+  rtl:
+    files:
+      - audio-effect-box.srcs/sim_blocks/new/sample_to_leds_tb.vhd : {file_type : vhdlSource}
+      - audio-effect-box.srcs/sources_1/new/sample_to_leds.vhd : {file_type : vhdlSource}
+      - audio-effect-box.srcs/sources_1/imports/rtl/stereo_to_mono.vhdl : {file_type : vhdlSource}
+      - audio-effect-box.srcs/sim_blocks/new/stereo_to_mono_tb.vhdl : {file_type : vhdlSource}
+
+targets:
+  default: &default
+    filesets : [rtl]
+    toplevel: ["is_toplevel? (blinky)"]
+
+  sim:
+    <<: *default
+    description: Simulate
+    default_tool: ghdl
+    filesets_append:
+      - rtl
+    toplevel: stereo_to_mono_tb
+    tools:
+      ghdl:
+        analyze_options: [--ieee=standard]
+        run_options: [--wave=run.ghw --stop-time=10us]
+ 

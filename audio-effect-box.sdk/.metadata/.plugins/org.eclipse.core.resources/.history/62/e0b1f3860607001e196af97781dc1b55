@@ -1,0 +1,11 @@
+#pragma once
+
+#include <stdint.h>
+
+class Codec {
+public:
+	static void init_codec();
+private:
+	static uint64_t read_adau1761(uint32_t addr, uint32_t nbytes);
+	static void reset_adau1761();
+};
